@@ -1,5 +1,11 @@
 using Microsoft.EntityFrameworkCore;
 using ContactManager.Domain.Common;
+using ContactManager.Domain.Users;
+using ContactManager.Domain.Contacts;
+using ContactManager.Domain.Groups;
+using ContactManager.Domain.Tags;
+using ContactManager.Domain.Notes;
+using ContactManager.Domain.Attachments;
 
 namespace ContactManager.Infrastructure.Persistence;
 
@@ -10,8 +16,47 @@ public class ApplicationDbContext : DbContext
     {
     }
 
-    // Add DbSets here as entities are defined
-    // public DbSet<Contact> Contacts => Set<Contact>();
+    public DbSet<User> Users => Set<User>();
+    public DbSet<Contact> Contacts => Set<Contact>();
+    public DbSet<Group> Groups => Set<Group>();
+    public DbSet<Tag> Tags => Set<Tag>();
+    public DbSet<Note> Notes => Set<Note>();
+    public DbSet<Attachment> Attachments => Set<Attachment>();
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        base.OnModelCreating(modelBuilder);
+
+        // Many-to-Many: Contact <-> Group
+        modelBuilder.Entity<ContactGroup>()
+            .HasKey(cg => new { cg.ContactId, cg.GroupId });
+
+        modelBuilder.Entity<ContactGroup>()
+            .HasOne(cg => cg.Contact)
+            .WithMany(c => c.ContactGroups)
+            .HasForeignKey(cg => cg.ContactId);
+
+        modelBuilder.Entity<ContactGroup>()
+            .HasOne(cg => cg.Group)
+            .WithMany(g => g.ContactGroups)
+            .HasForeignKey(cg => cg.GroupId);
+
+        // Many-to-Many: Contact <-> Tag
+        modelBuilder.Entity<ContactTag>()
+            .HasKey(ct => new { ct.ContactId, ct.TagId });
+
+        modelBuilder.Entity<ContactTag>()
+            .HasOne(ct => ct.Contact)
+            .WithMany(c => c.ContactTags)
+            .HasForeignKey(ct => ct.ContactId);
+
+        modelBuilder.Entity<ContactTag>()
+            .HasOne(ct => ct.Tag)
+            .WithMany(t => t.ContactTags)
+            .HasForeignKey(ct => ct.TagId);
+            
+        // Configure cascade deletes or other constraints if needed
+    }
 
     public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
     {
