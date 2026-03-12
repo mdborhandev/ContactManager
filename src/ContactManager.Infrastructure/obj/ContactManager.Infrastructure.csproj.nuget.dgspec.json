@@ -49,13 +49,17 @@
         "net10.0": {
           "targetAlias": "net10.0",
           "dependencies": {
-            "AutoMapper": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
-              "version": "[16.1.0, )"
+              "version": "[12.0.1, )"
             },
             "FluentValidation": {
               "target": "Package",
               "version": "[12.1.1, )"
+            },
+            "FluentValidation.DependencyInjectionExtensions": {
+              "target": "Package",
+              "version": "[11.11.0, )"
             },
             "MediatR": {
               "target": "Package",

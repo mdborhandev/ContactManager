@@ -13,7 +13,7 @@ public static class DependencyInjection
         services.AddMediatR(configuration => 
             configuration.RegisterServicesFromAssembly(assembly));
 
-        services.AddAutoMapper(assembly);
+        services.AddAutoMapper(cfg => cfg.AddMaps(assembly));
         
         services.AddValidatorsFromAssembly(assembly);
 
