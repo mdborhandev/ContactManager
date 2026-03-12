@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/borhan-uddin-fahim/ContactManager/src/ContactManager.Domain/ContactManager.Domain.csproj",
+      "projectUniqueName": "/home/borhan-uddin-fahim/DRIVE A/Projects/ContactManager/src/ContactManager.Domain/ContactManager.Domain.csproj",
       "projectName": "ContactManager.Domain",
-      "projectPath": "/home/borhan-uddin-fahim/ContactManager/src/ContactManager.Domain/ContactManager.Domain.csproj",
+      "projectPath": "/home/borhan-uddin-fahim/DRIVE A/Projects/ContactManager/src/ContactManager.Domain/ContactManager.Domain.csproj",
       "packagesPath": "/home/borhan-uddin-fahim/.nuget/packages/",
-      "outputPath": "/home/borhan-uddin-fahim/ContactManager/src/ContactManager.Domain/obj/",
+      "outputPath": "/home/borhan-uddin-fahim/DRIVE A/Projects/ContactManager/src/ContactManager.Domain/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/borhan-uddin-fahim/.nuget/NuGet/NuGet.Config"

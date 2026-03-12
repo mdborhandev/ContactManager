@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/borhan-uddin-fahim/ContactManager/src/ContactManager.API/ContactManager.API.csproj": {}
+    "/home/borhan-uddin-fahim/DRIVE A/Projects/ContactManager/src/ContactManager.API/ContactManager.API.csproj": {}
   },
   "projects": {
-    "/home/borhan-uddin-fahim/ContactManager/src/ContactManager.API/ContactManager.API.csproj": {
+    "/home/borhan-uddin-fahim/DRIVE A/Projects/ContactManager/src/ContactManager.API/ContactManager.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/borhan-uddin-fahim/ContactManager/src/ContactManager.API/ContactManager.API.csproj",
+        "projectUniqueName": "/home/borhan-uddin-fahim/DRIVE A/Projects/ContactManager/src/ContactManager.API/ContactManager.API.csproj",
         "projectName": "ContactManager.API",
-        "projectPath": "/home/borhan-uddin-fahim/ContactManager/src/ContactManager.API/ContactManager.API.csproj",
+        "projectPath": "/home/borhan-uddin-fahim/DRIVE A/Projects/ContactManager/src/ContactManager.API/ContactManager.API.csproj",
         "packagesPath": "/home/borhan-uddin-fahim/.nuget/packages/",
-        "outputPath": "/home/borhan-uddin-fahim/ContactManager/src/ContactManager.API/obj/",
+        "outputPath": "/home/borhan-uddin-fahim/DRIVE A/Projects/ContactManager/src/ContactManager.API/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/borhan-uddin-fahim/.nuget/NuGet/NuGet.Config"
@@ -27,11 +27,11 @@
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "/home/borhan-uddin-fahim/ContactManager/src/ContactManager.Application/ContactManager.Application.csproj": {
-                "projectPath": "/home/borhan-uddin-fahim/ContactManager/src/ContactManager.Application/ContactManager.Application.csproj"
+              "/home/borhan-uddin-fahim/DRIVE A/Projects/ContactManager/src/ContactManager.Application/ContactManager.Application.csproj": {
+                "projectPath": "/home/borhan-uddin-fahim/DRIVE A/Projects/ContactManager/src/ContactManager.Application/ContactManager.Application.csproj"
               },
-              "/home/borhan-uddin-fahim/ContactManager/src/ContactManager.Infrastructure/ContactManager.Infrastructure.csproj": {
-                "projectPath": "/home/borhan-uddin-fahim/ContactManager/src/ContactManager.Infrastructure/ContactManager.Infrastructure.csproj"
+              "/home/borhan-uddin-fahim/DRIVE A/Projects/ContactManager/src/ContactManager.Infrastructure/ContactManager.Infrastructure.csproj": {
+                "projectPath": "/home/borhan-uddin-fahim/DRIVE A/Projects/ContactManager/src/ContactManager.Infrastructure/ContactManager.Infrastructure.csproj"
               }
             }
           }
@@ -506,14 +506,14 @@
         }
       }
     },
-    "/home/borhan-uddin-fahim/ContactManager/src/ContactManager.Application/ContactManager.Application.csproj": {
+    "/home/borhan-uddin-fahim/DRIVE A/Projects/ContactManager/src/ContactManager.Application/ContactManager.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/borhan-uddin-fahim/ContactManager/src/ContactManager.Application/ContactManager.Application.csproj",
+        "projectUniqueName": "/home/borhan-uddin-fahim/DRIVE A/Projects/ContactManager/src/ContactManager.Application/ContactManager.Application.csproj",
         "projectName": "ContactManager.Application",
-        "projectPath": "/home/borhan-uddin-fahim/ContactManager/src/ContactManager.Application/ContactManager.Application.csproj",
+        "projectPath": "/home/borhan-uddin-fahim/DRIVE A/Projects/ContactManager/src/ContactManager.Application/ContactManager.Application.csproj",
         "packagesPath": "/home/borhan-uddin-fahim/.nuget/packages/",
-        "outputPath": "/home/borhan-uddin-fahim/ContactManager/src/ContactManager.Application/obj/",
+        "outputPath": "/home/borhan-uddin-fahim/DRIVE A/Projects/ContactManager/src/ContactManager.Application/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/borhan-uddin-fahim/.nuget/NuGet/NuGet.Config"
@@ -529,8 +529,8 @@
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "/home/borhan-uddin-fahim/ContactManager/src/ContactManager.Domain/ContactManager.Domain.csproj": {
-                "projectPath": "/home/borhan-uddin-fahim/ContactManager/src/ContactManager.Domain/ContactManager.Domain.csproj"
+              "/home/borhan-uddin-fahim/DRIVE A/Projects/ContactManager/src/ContactManager.Domain/ContactManager.Domain.csproj": {
+                "projectPath": "/home/borhan-uddin-fahim/DRIVE A/Projects/ContactManager/src/ContactManager.Domain/ContactManager.Domain.csproj"
               }
             }
           }
@@ -858,14 +858,14 @@
         }
       }
     },
-    "/home/borhan-uddin-fahim/ContactManager/src/ContactManager.Domain/ContactManager.Domain.csproj": {
+    "/home/borhan-uddin-fahim/DRIVE A/Projects/ContactManager/src/ContactManager.Domain/ContactManager.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/borhan-uddin-fahim/ContactManager/src/ContactManager.Domain/ContactManager.Domain.csproj",
+        "projectUniqueName": "/home/borhan-uddin-fahim/DRIVE A/Projects/ContactManager/src/ContactManager.Domain/ContactManager.Domain.csproj",
         "projectName": "ContactManager.Domain",
-        "projectPath": "/home/borhan-uddin-fahim/ContactManager/src/ContactManager.Domain/ContactManager.Domain.csproj",
+        "projectPath": "/home/borhan-uddin-fahim/DRIVE A/Projects/ContactManager/src/ContactManager.Domain/ContactManager.Domain.csproj",
         "packagesPath": "/home/borhan-uddin-fahim/.nuget/packages/",
-        "outputPath": "/home/borhan-uddin-fahim/ContactManager/src/ContactManager.Domain/obj/",
+        "outputPath": "/home/borhan-uddin-fahim/DRIVE A/Projects/ContactManager/src/ContactManager.Domain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/borhan-uddin-fahim/.nuget/NuGet/NuGet.Config"
@@ -1192,14 +1192,14 @@
         }
       }
     },
-    "/home/borhan-uddin-fahim/ContactManager/src/ContactManager.Infrastructure/ContactManager.Infrastructure.csproj": {
+    "/home/borhan-uddin-fahim/DRIVE A/Projects/ContactManager/src/ContactManager.Infrastructure/ContactManager.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/borhan-uddin-fahim/ContactManager/src/ContactManager.Infrastructure/ContactManager.Infrastructure.csproj",
+        "projectUniqueName": "/home/borhan-uddin-fahim/DRIVE A/Projects/ContactManager/src/ContactManager.Infrastructure/ContactManager.Infrastructure.csproj",
         "projectName": "ContactManager.Infrastructure",
-        "projectPath": "/home/borhan-uddin-fahim/ContactManager/src/ContactManager.Infrastructure/ContactManager.Infrastructure.csproj",
+        "projectPath": "/home/borhan-uddin-fahim/DRIVE A/Projects/ContactManager/src/ContactManager.Infrastructure/ContactManager.Infrastructure.csproj",
         "packagesPath": "/home/borhan-uddin-fahim/.nuget/packages/",
-        "outputPath": "/home/borhan-uddin-fahim/ContactManager/src/ContactManager.Infrastructure/obj/",
+        "outputPath": "/home/borhan-uddin-fahim/DRIVE A/Projects/ContactManager/src/ContactManager.Infrastructure/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/borhan-uddin-fahim/.nuget/NuGet/NuGet.Config"
@@ -1215,11 +1215,11 @@
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "/home/borhan-uddin-fahim/ContactManager/src/ContactManager.Application/ContactManager.Application.csproj": {
-                "projectPath": "/home/borhan-uddin-fahim/ContactManager/src/ContactManager.Application/ContactManager.Application.csproj"
+              "/home/borhan-uddin-fahim/DRIVE A/Projects/ContactManager/src/ContactManager.Application/ContactManager.Application.csproj": {
+                "projectPath": "/home/borhan-uddin-fahim/DRIVE A/Projects/ContactManager/src/ContactManager.Application/ContactManager.Application.csproj"
               },
-              "/home/borhan-uddin-fahim/ContactManager/src/ContactManager.Domain/ContactManager.Domain.csproj": {
-                "projectPath": "/home/borhan-uddin-fahim/ContactManager/src/ContactManager.Domain/ContactManager.Domain.csproj"
+              "/home/borhan-uddin-fahim/DRIVE A/Projects/ContactManager/src/ContactManager.Domain/ContactManager.Domain.csproj": {
+                "projectPath": "/home/borhan-uddin-fahim/DRIVE A/Projects/ContactManager/src/ContactManager.Domain/ContactManager.Domain.csproj"
               }
             }
           }

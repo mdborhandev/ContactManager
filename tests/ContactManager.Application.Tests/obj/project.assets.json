@@ -1669,11 +1669,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/borhan-uddin-fahim/ContactManager/tests/ContactManager.Application.Tests/ContactManager.Application.Tests.csproj",
+      "projectUniqueName": "/home/borhan-uddin-fahim/DRIVE A/Projects/ContactManager/tests/ContactManager.Application.Tests/ContactManager.Application.Tests.csproj",
       "projectName": "ContactManager.Application.Tests",
-      "projectPath": "/home/borhan-uddin-fahim/ContactManager/tests/ContactManager.Application.Tests/ContactManager.Application.Tests.csproj",
+      "projectPath": "/home/borhan-uddin-fahim/DRIVE A/Projects/ContactManager/tests/ContactManager.Application.Tests/ContactManager.Application.Tests.csproj",
       "packagesPath": "/home/borhan-uddin-fahim/.nuget/packages/",
-      "outputPath": "/home/borhan-uddin-fahim/ContactManager/tests/ContactManager.Application.Tests/obj/",
+      "outputPath": "/home/borhan-uddin-fahim/DRIVE A/Projects/ContactManager/tests/ContactManager.Application.Tests/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/borhan-uddin-fahim/.nuget/NuGet/NuGet.Config"
@@ -1689,8 +1689,8 @@
         "net10.0": {
           "targetAlias": "net10.0",
           "projectReferences": {
-            "/home/borhan-uddin-fahim/ContactManager/src/ContactManager.Application/ContactManager.Application.csproj": {
-              "projectPath": "/home/borhan-uddin-fahim/ContactManager/src/ContactManager.Application/ContactManager.Application.csproj"
+            "/home/borhan-uddin-fahim/DRIVE A/Projects/ContactManager/src/ContactManager.Application/ContactManager.Application.csproj": {
+              "projectPath": "/home/borhan-uddin-fahim/DRIVE A/Projects/ContactManager/src/ContactManager.Application/ContactManager.Application.csproj"
             }
           }
         }

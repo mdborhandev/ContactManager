@@ -393,6 +393,16 @@
         "build": {
           "build/net8.0/xunit.runner.visualstudio.props": {}
         }
+      },
+      "ContactManager.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "compile": {
+          "bin/placeholder/ContactManager.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ContactManager.Domain.dll": {}
+        }
       }
     }
   },
@@ -903,10 +913,16 @@
         "xunit.runner.visualstudio.3.1.4.nupkg.sha512",
         "xunit.runner.visualstudio.nuspec"
       ]
+    },
+    "ContactManager.Domain/1.0.0": {
+      "type": "project",
+      "path": "../../src/ContactManager.Domain/ContactManager.Domain.csproj",
+      "msbuildProject": "../../src/ContactManager.Domain/ContactManager.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net10.0": [
+      "ContactManager.Domain >= 1.0.0",
       "Microsoft.NET.Test.Sdk >= 17.14.1",
       "coverlet.collector >= 6.0.4",
       "xunit >= 2.9.3",
@@ -919,11 +935,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/borhan-uddin-fahim/ContactManager/tests/ContactManager.Domain.Tests/ContactManager.Domain.Tests.csproj",
+      "projectUniqueName": "/home/borhan-uddin-fahim/DRIVE A/Projects/ContactManager/tests/ContactManager.Domain.Tests/ContactManager.Domain.Tests.csproj",
       "projectName": "ContactManager.Domain.Tests",
-      "projectPath": "/home/borhan-uddin-fahim/ContactManager/tests/ContactManager.Domain.Tests/ContactManager.Domain.Tests.csproj",
+      "projectPath": "/home/borhan-uddin-fahim/DRIVE A/Projects/ContactManager/tests/ContactManager.Domain.Tests/ContactManager.Domain.Tests.csproj",
       "packagesPath": "/home/borhan-uddin-fahim/.nuget/packages/",
-      "outputPath": "/home/borhan-uddin-fahim/ContactManager/tests/ContactManager.Domain.Tests/obj/",
+      "outputPath": "/home/borhan-uddin-fahim/DRIVE A/Projects/ContactManager/tests/ContactManager.Domain.Tests/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/borhan-uddin-fahim/.nuget/NuGet/NuGet.Config"
@@ -938,7 +954,11 @@
       "frameworks": {
         "net10.0": {
           "targetAlias": "net10.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "/home/borhan-uddin-fahim/DRIVE A/Projects/ContactManager/src/ContactManager.Domain/ContactManager.Domain.csproj": {
+              "projectPath": "/home/borhan-uddin-fahim/DRIVE A/Projects/ContactManager/src/ContactManager.Domain/ContactManager.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
