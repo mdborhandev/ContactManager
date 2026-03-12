@@ -1,0 +1,54 @@
+@model ContactManager.Application.Contacts.Models.ContactDto
+
+@{
+    ViewData["Title"] = "Edit Contact";
+}
+
+<h1>Edit Contact</h1>
+<hr />
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="Edit">
+            <input type="hidden" name="Id" value="@Model.Id" />
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="row mb-3">
+                <div class="col">
+                    <label name="FirstName" class="form-label">First Name</label>
+                    <input name="FirstName" value="@Model.FirstName" class="form-control" />
+                </div>
+                <div class="col">
+                    <label name="LastName" class="form-label">Last Name</label>
+                    <input name="LastName" value="@Model.LastName" class="form-control" />
+                </div>
+            </div>
+            <div class="mb-3">
+                <label name="Email" class="form-label">Email</label>
+                <input name="Email" value="@Model.Email" class="form-control" />
+            </div>
+            <div class="mb-3">
+                <label name="PhoneNumber" class="form-label">Phone Number</label>
+                <input name="PhoneNumber" value="@Model.PhoneNumber" class="form-control" />
+            </div>
+            <div class="mb-3">
+                <label name="Company" class="form-label">Company</label>
+                <input name="Company" value="@Model.Company" class="form-control" />
+            </div>
+            <div class="mb-3">
+                <label name="JobTitle" class="form-label">Job Title</label>
+                <input name="JobTitle" value="@Model.JobTitle" class="form-control" />
+            </div>
+            <div class="mb-3">
+                <label name="Address" class="form-label">Address</label>
+                <textarea name="Address" class="form-control" rows="2">@Model.Address</textarea>
+            </div>
+            <div class="mt-4">
+                <button type="submit" class="btn btn-primary">Update</button>
+                <a asp-action="Index" class="btn btn-secondary ms-2">Back to List</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
