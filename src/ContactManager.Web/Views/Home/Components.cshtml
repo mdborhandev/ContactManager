@@ -1,0 +1,2382 @@
+@{
+    ViewData["Title"] = "Component Sections";
+}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
+
+<div class="row g-6">
+    <!-- Table Action & Brand Components -->
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h5 class="mb-0">Table & Action Components</h5>
+                <i class="icon-base bx bx-code-alt cursor-pointer" data-bs-toggle="modal" data-bs-target="#codeModal" data-code-target="#tableActionCode" title="View Code"></i>
+            </div>
+            <div class="card-body">
+                <div class="row g-6 align-items-center">
+
+                    <!-- 1. Gtr Identity with Round Photo -->
+                    <div class="col-md-4">
+                        <small class="text-muted d-block mb-3">Identity (Avatar + Text)</small>
+                        <div class="d-flex align-items-center gap-2">
+                            <div class="avatar avatar-sm">
+                                <!-- Round Photo -->
+                                <img src="~/gtlib/dependencylib/sneatlayout/assets/img/avatars/1.png" alt="Gtr" class="rounded-circle border border-2 border-light shadow-sm" />
+                            </div>
+                            <span class="fw-bold h5 mb-0 text-dark">Gtr</span>
+                        </div>
+                    </div>
+
+                    <!-- 2. Tabulator Cell: View + PDF Icon -->
+                    <div class="col-md-4">
+                        <small class="text-muted d-block mb-3">Tabulator Cell Action</small>
+                        <div class="d-inline-flex align-items-center">
+                            <a href="javascript:void(0);" class="d-flex align-items-center gap-1 text-decoration-none py-1">
+                                <span class="text-primary fw-medium fs-5">View</span>
+                                <!-- Scaled PDF Icon -->
+                                <i class='icon-base bx bxs-file-pdf text-danger' style="font-size: 1.8rem;"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 3. PDF Action Dropdown Button -->
+                    <div class="col-md-4">
+                        <small class="text-muted d-block mb-3">PDF Dropdown Action</small>
+                        <div class="dropdown">
+                            <button class="btn border bg-white rounded-4 px-4 py-2 d-flex align-items-center shadow-none dropdown-toggle hide-arrow"
+                                    type="button"
+                                    data-bs-toggle="dropdown"
+                                    aria-expanded="false"
+                                    style="border-color: #e0e0e0 !important;">
+
+                                <div class="position-relative me-3 d-flex align-items-center">
+                                    <i class='icon-base bx bx-file fs-3 text-dark'></i>
+                                    <span class="position-absolute start-50 top-50 translate-middle mt-1 fw-black text-dark" style="font-size: 7px; font-weight: 900;">PDF</span>
+                                </div>
+                                <i class='icon-base bx bx-chevron-down fs-4 ms-auto text-muted'></i>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end shadow-sm border-0">
+                                <li><a class="dropdown-item" href="javascript:void(0);"><i class='bx bx-download me-2'></i> Download PDF</a></li>
+                                <li><a class="dropdown-item" href="javascript:void(0);"><i class='bx bx-printer me-2'></i> Print</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item text-danger" href="javascript:void(0);"><i class='bx bx-trash me-2'></i> Delete</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="d-none" id="tableActionCode">
+<pre><code class="language-html">&lt;!-- Brand Round Photo --&gt;
+&lt;div class="d-flex align-items-center gap-2"&gt;
+    &lt;div class="avatar avatar-sm"&gt;
+        &lt;img src="path/to/img.png" class="rounded-circle" /&gt;
+    &lt;/div&gt;
+    &lt;span class="fw-bold"&gt;Gtr&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;!-- View + PDF (Optimized for Table Cell) --&gt;
+&lt;a href="#" class="d-flex align-items-center gap-1 text-primary"&gt;
+    &lt;span class="fs-5"&gt;View&lt;/span&gt;
+    &lt;i class='bx bxs-file-pdf text-danger' style="font-size: 1.8rem;"&gt;&lt;/i&gt;
+&lt;/a&gt;
+
+&lt;!-- PDF Dropdown Button --&gt;
+&lt;div class="dropdown"&gt;
+    &lt;button class="btn border rounded-4 d-flex align-items-center dropdown-toggle hide-arrow" data-bs-toggle="dropdown"&gt;
+        &lt;i class='bx bx-file fs-3'&gt;&lt;/i&gt;
+        &lt;i class='bx bx-chevron-down ms-auto'&gt;&lt;/i&gt;
+    &lt;/button&gt;
+    &lt;ul class="dropdown-menu"&gt;
+        &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Download PDF&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+        </div>
+    </div>
+    <!-- Buttons Section -->
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h5 class="mb-0">Buttons</h5>
+                <i class="icon-base bx bx-code-alt cursor-pointer" data-bs-toggle="modal" data-bs-target="#codeModal" data-code-target="#buttonsCode" title="View Code"></i>
+            </div>
+            <div class="card-body">
+                <small class="fw-medium">Basic Buttons</small>
+                <div class="demo-inline-spacing mt-2">
+                    <button type="button" class="btn btn-outline-primary">Primary</button>
+                    <button type="button" class="btn btn-outline-dark">Secondary</button>
+                </div>
+            </div>
+            <div class="d-none" id="buttonsCode">
+<pre><code class="language-html">&lt;small class=&quot;fw-medium&quot;&gt;Basic Buttons&lt;/small&gt;
+&lt;div class=&quot;demo-inline-spacing mt-2&quot;&gt;
+    &lt;button type=&quot;button&quot; class=&quot;btn btn-outline-primary&quot;&gt;Primary&lt;/button&gt;
+    &lt;button type=&quot;button&quot; class=&quot;btn btn-outline-dark&quot;&gt;Secondary&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+        </div>
+    </div>
+
+    <!-- Inputs and Labels Section -->
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h5 class="mb-0">Inputs & Labels</h5>
+                <i class="icon-base bx bx-code-alt cursor-pointer" data-bs-toggle="modal" data-bs-target="#codeModal" data-code-target="#inputsLabelsCode" title="View Code"></i>
+            </div>
+            <div class="card-body">
+                <div class="row g-6">
+                    <div class="col-md-6">
+                        <label for="firstNameInput" class="form-label">First Name</label>
+                        <input type="text" class="form-control" id="firstNameInput" placeholder="Jane" />
+                    </div>
+                    <div class="col-md-6">
+                        <label for="lastNameInput" class="form-label">Last Name</label>
+                        <input type="text" class="form-control" id="lastNameInput" placeholder="Doe" />
+                    </div>
+                    <div class="col-md-6">
+                        <label for="defaultFormControlInput" class="form-label">Username</label>
+                        <input type="text" class="form-control" id="defaultFormControlInput" placeholder="johndoe" />
+                    </div>
+                    <div class="col-md-6">
+                        <label for="phoneNumberInput"
+                               class="form-label">
+                            Phone Number
+                        </label>
+                        <input type="text"
+                               class="form-control js-international-phone-number-input"
+                               id="phoneNumberInput"
+                               name="PhoneNumber"
+                               placeholder="+880 1XXXXXXXXX"
+                               aria-describedby="phoneNumberError" />
+                        <div id="phoneNumberError"
+                             class="form-text text-danger js-international-phone-number-error-message"></div>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label" for="basic-addon-search31">Search</label>
+                        <div class="input-group input-group-merge">
+                            <span class="input-group-text" id="basic-addon-search31"><i class="icon-base bx bx-search"></i></span>
+                            <input type="text" class="form-control" placeholder="Search..." aria-label="Search..." aria-describedby="basic-addon-search31" />
+                        </div>
+                    </div>
+                    <div class="col-md-6 form-password-toggle">
+                        <label class="form-label" for="basic-default-password32">Password</label>
+                        <div class="input-group input-group-merge">
+                            <input type="password" class="form-control" id="basic-default-password32" placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;" aria-describedby="basic-default-password" />
+                            <span class="input-group-text cursor-pointer" id="basic-default-password"><i class="icon-base bx bx-hide"></i></span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="emailInput" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="emailInput" placeholder="jane.doe@example.com" />
+                    </div>
+                    <div class="col-md-6">
+                        <label for="numberInput" class="form-label">Number</label>
+                        <input type="number" class="form-control" id="numberInput" placeholder="42" />
+                    </div>
+                    <div class="col-md-6">
+                        <label for="urlInput" class="form-label">URL</label>
+                        <input type="url" class="form-control" id="urlInput" placeholder="https://example.com" />
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="colorInput" class="form-label">Color</label>
+                        <input type="color" class="form-control form-control-color" id="colorInput" value="#563d7c" title="Choose your color" />
+                    </div>
+                </div>
+            </div>
+            <div class="d-none" id="inputsLabelsCode">
+<pre><code class="language-html">&lt;div class=&quot;row g-6&quot;&gt;
+    &lt;div class=&quot;col-md-6&quot;&gt;
+        &lt;label for=&quot;firstNameInput&quot; class=&quot;form-label&quot;&gt;First Name&lt;/label&gt;
+        &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;firstNameInput&quot; placeholder=&quot;Jane&quot; /&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-md-6&quot;&gt;
+        &lt;label for=&quot;lastNameInput&quot; class=&quot;form-label&quot;&gt;Last Name&lt;/label&gt;
+        &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;lastNameInput&quot; placeholder=&quot;Doe&quot; /&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-md-6&quot;&gt;
+        &lt;label for=&quot;defaultFormControlInput&quot; class=&quot;form-label&quot;&gt;Username&lt;/label&gt;
+        &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;defaultFormControlInput&quot; placeholder=&quot;johndoe&quot; /&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-md-6&quot;&gt;
+        &lt;label for=&quot;phoneNumberInput&quot;
+               class=&quot;form-label&quot;&gt;
+            Phone Number
+        &lt;/label&gt;
+        &lt;input type=&quot;text&quot;
+               class=&quot;form-control js-international-phone-number-input&quot;
+               id=&quot;phoneNumberInput&quot;
+               name=&quot;PhoneNumber&quot;
+               placeholder=&quot;+880 1XXXXXXXXX&quot;
+               aria-describedby=&quot;phoneNumberError&quot; /&gt;
+        &lt;div id=&quot;phoneNumberError&quot;
+             class=&quot;form-text text-danger js-international-phone-number-error-message&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;!-- Example for phone number validation --&gt;
+    &lt;script&gt;
+ var primaryPhoneInput = $("#PrimaryMNo");
+ var primaryIti = window.intlTelInputGlobals.getInstance(primaryPhoneInput[0]);
+ var primaryPhoneNumber = primaryIti ? primaryIti.getNumber() : &quot;&quot;; // Fallback if intlTelInput is not initialized
+ if (primaryPhoneInput.val().trim() === &quot;&quot;) {
+     errors.push({ selector: &quot;#PrimaryMNoerror&quot;, message: &quot;Primary Mobile Number is required.&quot; });
+     isValid = false;
+ } else if (primaryIti &amp;&amp; !primaryIti.isValidNumber()) {
+     errors.push({ selector: &quot;#PrimaryMNoerror&quot;, message: &quot;Primary Mobile Number is invalid.&quot; });
+     isValid = false;
+ }
+    &lt;/script&gt;
+    &lt;div class=&quot;col-md-6&quot;&gt;
+        &lt;label class=&quot;form-label&quot; for=&quot;basic-addon-search31&quot;&gt;Search&lt;/label&gt;
+        &lt;div class=&quot;input-group input-group-merge&quot;&gt;
+            &lt;span class=&quot;input-group-text&quot; id=&quot;basic-addon-search31&quot;&gt;&lt;i class=&quot;icon-base bx bx-search&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+            &lt;input type=&quot;text&quot; class=&quot;form-control&quot; placeholder=&quot;Search...&quot; aria-label=&quot;Search...&quot; aria-describedby=&quot;basic-addon-search31&quot; /&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-md-6 form-password-toggle&quot;&gt;
+        &lt;label class=&quot;form-label&quot; for=&quot;basic-default-password32&quot;&gt;Password&lt;/label&gt;
+        &lt;div class=&quot;input-group input-group-merge&quot;&gt;
+            &lt;input type=&quot;password&quot; class=&quot;form-control&quot; id=&quot;basic-default-password32&quot; placeholder=&quot;&amp;#xb7;&amp;#xb7;&amp;#xb7;&amp;#xb7;&amp;#xb7;&amp;#xb7;&amp;#xb7;&amp;#xb7;&amp;#xb7;&amp;#xb7;&amp;#xb7;&amp;#xb7;&quot; aria-describedby=&quot;basic-default-password&quot; /&gt;
+            &lt;span class=&quot;input-group-text cursor-pointer&quot; id=&quot;basic-default-password&quot;&gt;&lt;i class=&quot;icon-base bx bx-hide&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-md-6&quot;&gt;
+        &lt;label for=&quot;emailInput&quot; class=&quot;form-label&quot;&gt;Email&lt;/label&gt;
+        &lt;input type=&quot;email&quot; class=&quot;form-control&quot; id=&quot;emailInput&quot; placeholder=&quot;jane.doe@example.com&quot; /&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-md-6&quot;&gt;
+        &lt;label for=&quot;numberInput&quot; class=&quot;form-label&quot;&gt;Number&lt;/label&gt;
+        &lt;input type=&quot;number&quot; class=&quot;form-control&quot; id=&quot;numberInput&quot; placeholder=&quot;42&quot; /&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-md-6&quot;&gt;
+        &lt;label for=&quot;urlInput&quot; class=&quot;form-label&quot;&gt;URL&lt;/label&gt;
+        &lt;input type=&quot;url&quot; class=&quot;form-control&quot; id=&quot;urlInput&quot; placeholder=&quot;https://example.com&quot; /&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;col-md-6&quot;&gt;
+        &lt;label for=&quot;colorInput&quot; class=&quot;form-label&quot;&gt;Color&lt;/label&gt;
+        &lt;input type=&quot;color&quot; class=&quot;form-control form-control-color&quot; id=&quot;colorInput&quot; value=&quot;#563d7c&quot; title=&quot;Choose your color&quot; /&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+        </div>
+    </div>
+
+    <!-- Selection Controls Section -->
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h5 class="mb-0">Selection Controls</h5>
+                <i class="icon-base bx bx-code-alt cursor-pointer" data-bs-toggle="modal" data-bs-target="#codeModal" data-code-target="#selectionControlsCode" title="View Code"></i>
+            </div>
+            <div class="card-body">
+                <div class="row g-6">
+                    <!-- Checkboxes -->
+                    <div class="col-md-6">
+                        <small class="fw-medium">Checkboxes</small>
+                        <div class="form-check form-check-dark mt-2">
+                            <input class="form-check-input" type="checkbox" value="" id="termsCheck" />
+                            <label class="form-check-label" for="termsCheck"> I agree to the terms and conditions </label>
+                        </div>
+                        <div class="form-check form-check-dark mt-2">
+                            <input class="form-check-input" type="checkbox" value="" id="newsletterCheck" checked />
+                            <label class="form-check-label" for="newsletterCheck"> Subscribe to newsletter </label>
+                        </div>
+                    </div>
+                    <!-- Radio Buttons -->
+                    <div class="col-md-6">
+                        <small class="fw-medium d-block">Gender</small>
+                        <div class="form-check form-check-dark form-check-inline mt-2">
+                            <input name="genderRadioOptions" class="form-check-input" type="radio" id="genderMale" value="male" />
+                            <label class="form-check-label" for="genderMale">Male</label>
+                        </div>
+                        <div class="form-check form-check-dark form-check-inline">
+                            <input name="genderRadioOptions" class="form-check-input" type="radio" id="genderFemale" value="female" />
+                            <label class="form-check-label" for="genderFemale">Female</label>
+                        </div>
+                    </div>
+                </div>
+                <!-- Switches -->
+                <div class="row g-6 mt-4">
+                    <div class="col-md-6">
+                        <small class="fw-medium">Switches</small>
+                        <div class="form-check form-check-dark form-switch mt-2">
+                            <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" />
+                            <label class="form-check-label" for="flexSwitchCheckDefault">Default switch</label>
+                        </div>
+                        <div class="form-check form-check-dark form-switch mt-2">
+                            <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked />
+                            <label class="form-check-label" for="flexSwitchCheckChecked">Checked switch</label>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <small class="fw-medium">Switches with icon</small>
+                        <div class="mt-2">
+                            <label class="switch">
+                                <input type="checkbox" class="switch-input" />
+                                <span class="switch-toggle-slider">
+                                    <span class="switch-on">
+                                        <i class="icon-base bx bx-check"></i>
+                                    </span>
+                                    <span class="switch-off">
+                                        <i class="icon-base bx bx-x"></i>
+                                    </span>
+                                </span>
+                                <span class="switch-label">With icon</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <!-- Switch sizes -->
+                <div class="row g-6 mt-4">
+                    <div class="col-12"><small class="fw-medium">Sizes</small></div>
+                    <div class="col-md-6">
+                        <div class="d-flex flex-column align-items-start gap-3">
+                            <label class="switch switch-sm">
+                                <input type="checkbox" class="switch-input" checked />
+                                <span class="switch-toggle-slider"></span>
+                            </label>
+                            <label class="switch">
+                                <input type="checkbox" class="switch-input" />
+                                <span class="switch-toggle-slider"></span>
+                            </label>
+                            <label class="switch switch-lg">
+                                <input type="checkbox" class="switch-input" checked />
+                                <span class="switch-toggle-slider"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <!-- Dropdown -->
+                <div class="mt-4">
+                    <label for="exampleFormControlSelect1" class="form-label">Select Option</label>
+                    <select class="form-select" id="exampleFormControlSelect1">
+                        <option selected>Open this select menu</option>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                    </select>
+                </div>
+            </div>
+            <div class="d-none" id="selectionControlsCode">
+<pre><code class="language-html">&lt;div class=&quot;row g-6&quot;&gt;
+    &lt;!-- Checkboxes --&gt;
+    &lt;div class=&quot;col-md-6&quot;&gt;
+        &lt;small class=&quot;fw-medium&quot;&gt;Checkboxes&lt;/small&gt;
+        &lt;div class=&quot;form-check form-check-dark mt-2&quot;&gt;
+                &lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; value=&quot;&quot; id=&quot;termsCheck&quot; /&gt;
+                &lt;label class=&quot;form-check-label&quot; for=&quot;termsCheck&quot;&gt; I agree to the terms and conditions &lt;/label&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;form-check form-check-dark mt-2&quot;&gt;
+                &lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; value=&quot;&quot; id=&quot;newsletterCheck&quot; checked /&gt;
+                &lt;label class=&quot;form-check-label&quot; for=&quot;newsletterCheck&quot;&gt; Subscribe to newsletter &lt;/label&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;!-- Radio Buttons --&gt;
+    &lt;div class=&quot;col-md-6&quot;&gt;
+            &lt;small class=&quot;fw-medium d-block&quot;&gt;Gender&lt;/small&gt;
+            &lt;div class=&quot;form-check form-check-dark form-check-inline mt-2&quot;&gt;
+                &lt;input name=&quot;genderRadioOptions&quot; class=&quot;form-check-input&quot; type=&quot;radio&quot; id=&quot;genderMale&quot; value=&quot;male&quot; /&gt;
+                &lt;label class=&quot;form-check-label&quot; for=&quot;genderMale&quot;&gt;Male&lt;/label&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;form-check form-check-dark form-check-inline&quot;&gt;
+                &lt;input name=&quot;genderRadioOptions&quot; class=&quot;form-check-input&quot; type=&quot;radio&quot; id=&quot;genderFemale&quot; value=&quot;female&quot; /&gt;
+                &lt;label class=&quot;form-check-label&quot; for=&quot;genderFemale&quot;&gt;Female&lt;/label&gt;
+            &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- Switches --&gt;
+&lt;div class=&quot;row g-6 mt-4&quot;&gt;
+    &lt;div class=&quot;col-md-6&quot;&gt;
+        &lt;small class=&quot;fw-medium&quot;&gt;Switches&lt;/small&gt;
+        &lt;div class=&quot;form-check form-check-dark form-switch mt-2&quot;&gt;
+            &lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; id=&quot;flexSwitchCheckDefault&quot; /&gt;
+            &lt;label class=&quot;form-check-label&quot; for=&quot;flexSwitchCheckDefault&quot;&gt;Default switch&lt;/label&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;form-check form-check-dark form-switch mt-2&quot;&gt;
+            &lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; id=&quot;flexSwitchCheckChecked&quot; checked /&gt;
+            &lt;label class=&quot;form-check-label&quot; for=&quot;flexSwitchCheckChecked&quot;&gt;Checked switch&lt;/label&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-md-6&quot;&gt;
+        &lt;small class=&quot;fw-medium&quot;&gt;Switches with icon&lt;/small&gt;
+        &lt;div class=&quot;mt-2&quot;&gt;
+            &lt;label class=&quot;switch&quot;&gt;
+                &lt;input type=&quot;checkbox&quot; class=&quot;switch-input&quot; /&gt;
+                &lt;span class=&quot;switch-toggle-slider&quot;&gt;
+                    &lt;span class=&quot;switch-on&quot;&gt;
+                        &lt;i class=&quot;icon-base bx bx-check&quot;&gt;&lt;/i&gt;
+                    &lt;/span&gt;
+                    &lt;span class=&quot;switch-off&quot;&gt;
+                        &lt;i class=&quot;icon-base bx bx-x&quot;&gt;&lt;/i&gt;
+                    &lt;/span&gt;
+                &lt;/span&gt;
+                &lt;span class=&quot;switch-label&quot;&gt;With icon&lt;/span&gt;
+            &lt;/label&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- Switch sizes --&gt;
+&lt;div class=&quot;row g-6 mt-4&quot;&gt;
+    &lt;div class=&quot;col-12&quot;&gt;&lt;small class=&quot;fw-medium&quot;&gt;Sizes&lt;/small&gt;&lt;/div&gt;
+    &lt;div class=&quot;col-md-6&quot;&gt;
+        &lt;div class=&quot;d-flex flex-column align-items-start gap-3&quot;&gt;
+            &lt;label class=&quot;switch switch-sm&quot;&gt;
+                &lt;input type=&quot;checkbox&quot; class=&quot;switch-input&quot; checked /&gt;
+                &lt;span class=&quot;switch-toggle-slider&quot;&gt;&lt;/span&gt;
+            &lt;/label&gt;
+            &lt;label class=&quot;switch&quot;&gt;
+                &lt;input type=&quot;checkbox&quot; class=&quot;switch-input&quot; /&gt;
+                &lt;span class=&quot;switch-toggle-slider&quot;&gt;&lt;/span&gt;
+            &lt;/label&gt;
+            &lt;label class=&quot;switch switch-lg&quot;&gt;
+                &lt;input type=&quot;checkbox&quot; class=&quot;switch-input&quot; checked /&gt;
+                &lt;span class=&quot;switch-toggle-slider&quot;&gt;&lt;/span&gt;
+            &lt;/label&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+    &lt;!-- Dropdown --&gt;
+&lt;div class=&quot;mt-4&quot;&gt;
+    &lt;label for=&quot;exampleFormControlSelect1&quot; class=&quot;form-label&quot;&gt;Select Option&lt;/label&gt;
+    &lt;select class=&quot;form-select&quot; id=&quot;exampleFormControlSelect1&quot;&gt;
+        &lt;option selected&gt;Open this select menu&lt;/option&gt;
+        &lt;option value=&quot;1&quot;&gt;Option 1&lt;/option&gt;
+        &lt;option value=&quot;2&quot;&gt;Option 2&lt;/option&gt;
+        &lt;option value=&quot;3&quot;&gt;Option 3&lt;/option&gt;
+    &lt;/select&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+        </div>
+    </div>
+
+    <!-- Other Inputs Section -->
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h5 class="mb-0">Other Inputs</h5>
+                <i class="icon-base bx bx-code-alt cursor-pointer" data-bs-toggle="modal" data-bs-target="#codeModal" data-code-target="#otherInputsCode" title="View Code"></i>
+            </div>
+            <div class="card-body">
+                <!-- Text Area -->
+                <div class="mb-4">
+                    <label for="commentsTextarea" class="form-label">Comments</label>
+                    <textarea class="form-control" id="commentsTextarea" rows="3" placeholder="Enter your comments"></textarea>
+                </div>
+                <!-- Slider -->
+                <div>
+                    <label for="formRange1" class="form-label">Rating</label>
+                    <input type="range" class="form-range" id="formRange1" min="0" max="100" step="1" />
+                </div>
+            </div>
+            <div class="d-none" id="otherInputsCode">
+<pre><code class="language-html">&lt;!-- Text Area --&gt;
+&lt;div class=&quot;mb-4&quot;&gt;
+    &lt;label for=&quot;commentsTextarea&quot; class=&quot;form-label&quot;&gt;Comments&lt;/label&gt;
+    &lt;textarea class=&quot;form-control&quot; id=&quot;commentsTextarea&quot; rows=&quot;3&quot; placeholder=&quot;Enter your comments&quot;&gt;&lt;/textarea&gt;
+&lt;/div&gt;
+&lt;!-- Slider --&gt;
+&lt;div&gt;
+    &lt;label for=&quot;formRange1&quot; class=&quot;form-label&quot;&gt;Rating&lt;/label&gt;
+    &lt;input type=&quot;range&quot; class=&quot;form-range&quot; id=&quot;formRange1&quot; min=&quot;0&quot; max=&quot;100&quot; step=&quot;1&quot; /&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+        </div>
+    </div>
+
+    <!-- File Upload Section -->
+    <!-- File Upload Section -->
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h5 class="mb-0">File Upload</h5>
+                <i class="icon-base bx bx-code-alt cursor-pointer" data-bs-toggle="modal" data-bs-target="#codeModal" data-code-target="#fileUploadCode" title="View Code"></i>
+            </div>
+            <div class="card-body">
+                <div class="row g-6">
+                    <div class="col-md-6">
+                        <h6 class="card-title">Basic File Upload</h6>
+                        <form action="/upload" class="dropzone needsclick" id="dropzone-basic">
+                            <div class="dz-message needsclick">
+                                Drop files here or click to upload
+                                <span class="note needsclick">(Single file upload)</span>
+                            </div>
+                            <div class="fallback">
+                                <input name="file" type="file" />
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-md-6">
+                        <h6 class="card-title">Multiple File Upload</h6>
+                        <form action="/upload" class="dropzone needsclick" id="dropzone-multi">
+                            <div class="dz-message needsclick">
+                                Drop files here or click to upload
+                                <span class="note needsclick">(Multiple files upload)</span>
+                            </div>
+                            <div class="fallback">
+                                <input name="file" type="file" multiple />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <hr class="my-4" />
+                <div class="row g-6">
+                    <div class="col-12">
+                        <h6 class="card-title">Standard File Inputs</h6>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mb-4">
+                            <label for="formFile" class="form-label">Default file input</label>
+                            <input class="form-control" type="file" id="formFile" />
+                        </div>
+                        <div class="mb-0">
+                            <label for="formFileMultiple" class="form-label">Multiple files input</label>
+                            <input class="form-control" type="file" id="formFileMultiple" multiple />
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mb-4">
+                            <label class="form-label">Input group</label>
+                            <div class="input-group">
+                                <input type="file" class="form-control" id="inputGroupFile02" />
+                                <label class="input-group-text" for="inputGroupFile02">Upload</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="d-none" id="fileUploadCode">
+<pre><code class="language-html">&lt;div class=&quot;row g-6&quot;&gt;
+    &lt;div class=&quot;col-md-6&quot;&gt;
+            &lt;h6 class=&quot;card-title&quot;&gt;Basic File Upload&lt;/h6&gt;
+            &lt;form action=&quot;/upload&quot; class=&quot;dropzone needsclick&quot; id=&quot;dropzone-basic&quot;&gt;
+                &lt;div class=&quot;dz-message needsclick&quot;&gt;
+                    Drop files here or click to upload
+                    &lt;span class=&quot;note needsclick&quot;&gt;(Single file upload)&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;fallback&quot;&gt;
+                    &lt;input name=&quot;file&quot; type=&quot;file&quot; /&gt;
+                &lt;/div&gt;
+            &lt;/form&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-md-6&quot;&gt;
+        &lt;h6 class=&quot;card-title&quot;&gt;Multiple File Upload&lt;/h6&gt;
+        &lt;form action=&quot;/upload&quot; class=&quot;dropzone needsclick&quot; id=&quot;dropzone-multi&quot;&gt;
+            &lt;div class=&quot;dz-message needsclick&quot;&gt;
+                Drop files here or click to upload
+                &lt;span class=&quot;note needsclick&quot;&gt;(Multiple files upload)&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;fallback&quot;&gt;
+                &lt;input name=&quot;file&quot; type=&quot;file&quot; multiple/&gt;
+            &lt;/div&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;hr class=&quot;my-4&quot; /&gt;
+&lt;div class=&quot;row g-6&quot;&gt;
+    &lt;div class=&quot;col-12&quot;&gt;
+        &lt;h6 class=&quot;card-title&quot;&gt;Standard File Inputs&lt;/h6&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-md-6&quot;&gt;
+        &lt;div class=&quot;mb-4&quot;&gt;
+            &lt;label for=&quot;formFile&quot; class=&quot;form-label&quot;&gt;Default file input&lt;/label&gt;
+            &lt;input class=&quot;form-control&quot; type=&quot;file&quot; id=&quot;formFile&quot; /&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;mb-0&quot;&gt;
+            &lt;label for=&quot;formFileMultiple&quot; class=&quot;form-label&quot;&gt;Multiple files input&lt;/label&gt;
+            &lt;input class=&quot;form-control&quot; type=&quot;file&quot; id=&quot;formFileMultiple&quot; multiple /&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-md-6&quot;&gt;
+            &lt;div class=&quot;mb-4&quot;&gt;
+            &lt;label class=&quot;form-label&quot;&gt;Input group&lt;/label&gt;
+            &lt;div class=&quot;input-group&quot;&gt;
+                &lt;input type=&quot;file&quot; class=&quot;form-control&quot; id=&quot;inputGroupFile02&quot; /&gt;
+                &lt;label class=&quot;input-group-text&quot; for=&quot;inputGroupFile02&quot;&gt;Upload&lt;/label&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+        </div>
+    </div>
+
+    <!-- Accordion Section -->
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h5 class="mb-0">Accordion</h5>
+                <i class="icon-base bx bx-code-alt cursor-pointer" data-bs-toggle="modal" data-bs-target="#codeModal" data-code-target="#accordionCode" title="View Code"></i>
+            </div>
+            <div class="card-body">
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item active">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button type="button" class="accordion-button" data-bs-toggle="collapse" data-bs-target="#accordionOne" aria-expanded="true" aria-controls="accordionOne">
+                                Accordion Item 1
+                            </button>
+                        </h2>
+                        <div id="accordionOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Lemon drops chocolate cake gummies carrot cake chupa chups muffin topping. Sesame snaps icing marzipan gummi bears macaroon dragée danish caramels powder.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#accordionTwo" aria-expanded="false" aria-controls="accordionTwo">
+                                Accordion Item 2
+                            </button>
+                        </h2>
+                        <div id="accordionTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Dessert ice cream donut oat cake jelly-o pie sugar plum cheesecake. Bear claw dragée oat cake dragée ice cream halvah tootsie roll.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#accordionThree" aria-expanded="false" aria-controls="accordionThree">
+                                Accordion Item 3
+                            </button>
+                        </h2>
+                        <div id="accordionThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Oat cake toffee chocolate bar jujubes. Marshmallow brownie lemon drops cheesecake. Bonbon gingerbread marshmallow sweet jelly beans muffin.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="d-none" id="accordionCode">
+<pre><code class="language-html">&lt;div class=&quot;accordion&quot; id=&quot;accordionExample&quot;&gt;
+    &lt;div class=&quot;accordion-item active&quot;&gt;
+        &lt;h2 class=&quot;accordion-header&quot; id=&quot;headingOne&quot;&gt;
+            &lt;button type=&quot;button&quot; class=&quot;accordion-button&quot; data-bs-toggle=&quot;collapse&quot; data-bs-target=&quot;#accordionOne&quot; aria-expanded=&quot;true&quot; aria-controls=&quot;accordionOne&quot;&gt;
+                Accordion Item 1
+            &lt;/button&gt;
+        &lt;/h2&gt;
+        &lt;div id=&quot;accordionOne&quot; class=&quot;accordion-collapse collapse show&quot; data-bs-parent=&quot;#accordionExample&quot;&gt;
+            &lt;div class=&quot;accordion-body&quot;&gt;
+                Lemon drops chocolate cake gummies carrot cake chupa chups muffin topping. Sesame snaps icing marzipan gummi bears macaroon dragée danish caramels powder.
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;accordion-item&quot;&gt;
+        &lt;h2 class=&quot;accordion-header&quot; id=&quot;headingTwo&quot;&gt;
+            &lt;button type=&quot;button&quot; class=&quot;accordion-button collapsed&quot; data-bs-toggle=&quot;collapse&quot; data-bs-target=&quot;#accordionTwo&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;accordionTwo&quot;&gt;
+                Accordion Item 2
+            &lt;/button&gt;
+        &lt;/h2&gt;
+        &lt;div id=&quot;accordionTwo&quot; class=&quot;accordion-collapse collapse&quot; data-bs-parent=&quot;#accordionExample&quot;&gt;
+            &lt;div class=&quot;accordion-body&quot;&gt;
+                Dessert ice cream donut oat cake jelly-o pie sugar plum cheesecake. Bear claw dragée oat cake dragée ice cream halvah tootsie roll.
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;accordion-item&quot;&gt;
+        &lt;h2 class=&quot;accordion-header&quot; id=&quot;headingThree&quot;&gt;
+            &lt;button type=&quot;button&quot; class=&quot;accordion-button collapsed&quot; data-bs-toggle=&quot;collapse&quot; data-bs-target=&quot;#accordionThree&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;accordionThree&quot;&gt;
+                Accordion Item 3
+            &lt;/button&gt;
+        &lt;/h2&gt;
+        &lt;div id=&quot;accordionThree&quot; class=&quot;accordion-collapse collapse&quot; data-bs-parent=&quot;#accordionExample&quot;&gt;
+            &lt;div class=&quot;accordion-body&quot;&gt;
+                Oat cake toffee chocolate bar jujubes. Marshmallow brownie lemon drops cheesecake. Bonbon gingerbread marshmallow sweet jelly beans muffin.
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+        </div>
+    </div>
+
+    <!-- Badges Section -->
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h5 class="mb-0">Badges</h5>
+                <i class="icon-base bx bx-code-alt cursor-pointer" data-bs-toggle="modal" data-bs-target="#codeModal" data-code-target="#badgesCode" title="View Code"></i>
+            </div>
+            <div class="card-body">
+                <div class="demo-inline-spacing">
+                    <span class="badge rounded-pill text-bg-primary">Primary</span>
+                    <span class="badge rounded-pill text-bg-secondary">Secondary</span>
+                    <span class="badge rounded-pill text-bg-danger">Danger</span>
+                    <span class="badge rounded-pill badge-outline-secondary">outline</span>
+                    <span class="badge rounded-pill text-bg-info"><i class='icon-basebx bx-badge-check'></i>Verified</span>
+                    <span class="badge badge-center rounded-pill text-bg-dark">8</span>
+                    <span class="badge badge-center rounded-pill text-bg-danger">9</span>
+                    <span class="badge rounded-pill badge-outline-secondary ms-1">16+</span>
+                </div>
+            </div>
+            <div class="d-none" id="badgesCode">
+<pre><code class="language-html">&lt;div class=&quot;demo-inline-spacing&quot;&gt;
+    &lt;span class=&quot;badge rounded-pill text-bg-primary&quot;&gt;Primary&lt;/span&gt;
+    &lt;span class=&quot;badge rounded-pill text-bg-secondary&quot;&gt;Secondary&lt;/span&gt;
+    &lt;span class=&quot;badge rounded-pill text-bg-danger&quot;&gt;Danger&lt;/span&gt;
+    &lt;span class=&quot;badge rounded-pill badge-outline-secondary&quot;&gt;outline&lt;/span&gt;
+    &lt;span class=&quot;badge rounded-pill text-bg-info&quot;&gt;&lt;i class='icon-basebx bx-badge-check'&gt;&lt;/i&gt;Verified&lt;/span&gt;
+    &lt;span class=&quot;badge badge-center rounded-pill text-bg-dark&quot;&gt;8&lt;/span&gt;
+    &lt;span class=&quot;badge badge-center rounded-pill text-bg-danger&quot;&gt;9&lt;/span&gt;
+    &lt;span class=&quot;badge rounded-pill badge-outline-secondary ms-1&quot;&gt;16+&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dropdowns Section -->
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h5 class="mb-0">Dropdowns</h5>
+                <i class="icon-base bx bx-code-alt cursor-pointer" data-bs-toggle="modal" data-bs-target="#codeModal" data-code-target="#dropdownsCode" title="View Code"></i>
+            </div>
+            <div class="card-body">
+                <div class="demo-inline-spacing">
+                    <div class="btn-group">
+                        <button type="button"
+                                class="btn btn-primary dropdown-toggle"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                            Primary
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="javascript:void(0);">Action</a></li>
+                            <li><a class="dropdown-item" href="javascript:void(0);">Another action</a></li>
+                            <li><a class="dropdown-item" href="javascript:void(0);">Something else here</a></li>
+                            <li>
+                                <hr class="dropdown-divider" />
+                            </li>
+                            <li><a class="dropdown-item" href="javascript:void(0);">Separated link</a></li>
+                        </ul>
+                    </div>
+                    <div class="btn-group">
+                        <button type="button"
+                                class="btn btn-primary btn-icon rounded-pill dropdown-toggle hide-arrow"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                            <i class="icon-base bx bx-dots-vertical-rounded"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="javascript:void(0);">Action</a></li>
+                            <li><a class="dropdown-item" href="javascript:void(0);">Another action</a></li>
+                            <li><a class="dropdown-item" href="javascript:void(0);">Something else here</a></li>
+                            <li>
+                                <hr class="dropdown-divider" />
+                            </li>
+                            <li><a class="dropdown-item" href="javascript:void(0);">Separated link</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="d-none" id="dropdownsCode">
+<pre><code class="language-html">&lt;div class=&quot;demo-inline-spacing&quot;&gt;
+    &lt;div class=&quot;btn-group&quot;&gt;
+        &lt;button type=&quot;button&quot;
+                class=&quot;btn btn-primary dropdown-toggle&quot;
+                data-bs-toggle=&quot;dropdown&quot;
+                aria-expanded=&quot;false&quot;&gt;
+            Primary
+        &lt;/button&gt;
+        &lt;ul class=&quot;dropdown-menu&quot;&gt;
+            &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;javascript:void(0);&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;javascript:void(0);&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;javascript:void(0);&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;
+                &lt;hr class=&quot;dropdown-divider&quot; /&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;javascript:void(0);&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;btn-group&quot;&gt;
+        &lt;button type=&quot;button&quot;
+                class=&quot;btn btn-primary btn-icon rounded-pill dropdown-toggle hide-arrow&quot;
+                data-bs-toggle=&quot;dropdown&quot;
+                aria-expanded=&quot;false&quot;&gt;
+            &lt;i class=&quot;icon-base bx bx-dots-vertical-rounded&quot;&gt;&lt;/i&gt;
+        &lt;/button&gt;
+        &lt;ul class=&quot;dropdown-menu dropdown-menu-end&quot;&gt;
+            &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;javascript:void(0);&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;javascript:void(0);&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;javascript:void(0);&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;
+                &lt;hr class=&quot;dropdown-divider&quot; /&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;javascript:void(0);&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modals Section -->
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h5 class="mb-0">Modals</h5>
+                <i class="icon-base bx bx-code-alt cursor-pointer" data-bs-toggle="modal" data-bs-target="#codeModal" data-code-target="#modalsCode" title="View Code"></i>
+            </div>
+            <div class="card-body">
+                <small class="fw-medium">Default</small>
+                <div class="mt-4">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#basicModal">
+                        Launch default modal
+                    </button>
+                </div>
+            </div>
+            <div class="d-none" id="modalsCode">
+<pre><code class="language-html">&lt;small class=&quot;fw-medium&quot;&gt;Default&lt;/small&gt;
+&lt;div class=&quot;mt-4&quot;&gt;
+    &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; data-bs-toggle=&quot;modal&quot; data-bs-target=&quot;#basicModal&quot;&gt;
+        Launch default modal
+    &lt;/button&gt;
+&lt;/div&gt;
+
+&lt;!-- Modal Markup --&gt;
+&lt;div class=&quot;modal fade&quot; id=&quot;basicModal&quot; tabindex=&quot;-1&quot; aria-hidden=&quot;true&quot;&gt;
+    &lt;div class=&quot;modal-dialog&quot; role=&quot;document&quot;&gt;
+        &lt;div class=&quot;modal-content&quot;&gt;
+            &lt;div class=&quot;modal-header&quot;&gt;
+                &lt;h5 class=&quot;modal-title&quot; id=&quot;exampleModalLabel1&quot;&gt;Modal title&lt;/h5&gt;
+                &lt;button type=&quot;button&quot; class=&quot;btn-close&quot; data-bs-dismiss=&quot;modal&quot; aria-label=&quot;Close&quot;&gt;&lt;/button&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;modal-body&quot;&gt;
+                &lt;div class=&quot;row&quot;&gt;
+                    &lt;div class=&quot;col mb-6&quot;&gt;
+                        &lt;label for=&quot;nameBasic&quot; class=&quot;form-label&quot;&gt;Name&lt;/label&gt;
+                        &lt;input type=&quot;text&quot; id=&quot;nameBasic&quot; class=&quot;form-control&quot; placeholder=&quot;Enter Name&quot; /&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;row g-6&quot;&gt;
+                    &lt;div class=&quot;col mb-0&quot;&gt;
+                        &lt;label for=&quot;emailBasic&quot; class=&quot;form-label&quot;&gt;Email&lt;/label&gt;
+                        &lt;input type=&quot;email&quot; id=&quot;emailBasic&quot; class=&quot;form-control&quot; placeholder=&quot;xxxx@xxx.xx&quot; /&gt;
+                    &lt;/div&gt;
+                   
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;modal-footer&quot;&gt;
+                &lt;button type=&quot;button&quot; class=&quot;btn btn-light&quot; data-bs-dismiss=&quot;modal&quot;&gt;
+                    Close
+                &lt;/button&gt;
+                &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot;&gt;Save changes&lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+        </div>
+    </div>
+
+    <!-- Offcanvas Section -->
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h5 class="mb-0">Offcanvas</h5>
+                <i class="icon-base bx bx-code-alt cursor-pointer" data-bs-toggle="modal" data-bs-target="#codeModal" data-code-target="#offcanvasCode" title="View Code"></i>
+            </div>
+            <div class="card-body">
+                <div class="demo-inline-spacing">
+                    <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasEnd" aria-controls="offcanvasEnd">
+                        Toggle End
+                    </button>
+                    <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">
+                        Toggle Top
+                    </button>
+                </div>
+            </div>
+            <div class="d-none" id="offcanvasCode">
+<pre><code class="language-html">&lt;div class=&quot;demo-inline-spacing&quot;&gt;
+    &lt;button class=&quot;btn btn-primary&quot; type=&quot;button&quot; data-bs-toggle=&quot;offcanvas&quot; data-bs-target=&quot;#offcanvasEnd&quot; aria-controls=&quot;offcanvasEnd&quot;&gt;
+        Toggle End
+    &lt;/button&gt;
+    &lt;button class=&quot;btn btn-primary&quot; type=&quot;button&quot; data-bs-toggle=&quot;offcanvas&quot; data-bs-target=&quot;#offcanvasTop&quot; aria-controls=&quot;offcanvasTop&quot;&gt;
+        Toggle Top
+    &lt;/button&gt;
+&lt;/div&gt;
+
+&lt;!-- Offcanvas Markup --&gt;
+&lt;div class=&quot;offcanvas offcanvas-end&quot; tabindex=&quot;-1&quot; id=&quot;offcanvasEnd&quot; aria-labelledby=&quot;offcanvasEndLabel&quot;&gt;
+    &lt;div class=&quot;offcanvas-header&quot;&gt;
+        &lt;h5 id=&quot;offcanvasEndLabel&quot; class=&quot;offcanvas-title&quot;&gt;Offcanvas End&lt;/h5&gt;
+        &lt;button type=&quot;button&quot; class=&quot;btn-close text-reset&quot; data-bs-dismiss=&quot;offcanvas&quot; aria-label=&quot;Close&quot;&gt;&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;offcanvas-body my-auto mx-0 flex-grow-0&quot;&gt;
+        &lt;p class=&quot;text-center&quot;&gt;
+            Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out
+            print, graphic or web designs. The passage is attributed to an unknown typesetter in
+            the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum
+            et Malorum for use in a type specimen book.
+        &lt;/p&gt;
+        &lt;div class=&quot;demo-inline-spacing d-flex justify-content-end&quot;&gt;
+            &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot;&gt;Continue&lt;/button&gt;
+            &lt;button type=&quot;button&quot;
+                    class=&quot;btn btn-light&quot;
+                    data-bs-dismiss=&quot;offcanvas&quot;&gt;
+                Cancel
+            &lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;offcanvas offcanvas-top&quot; tabindex=&quot;-1&quot; id=&quot;offcanvasTop&quot; aria-labelledby=&quot;offcanvasTopLabel&quot;&gt;
+    &lt;div class=&quot;offcanvas-header&quot;&gt;
+        &lt;h5 id=&quot;offcanvasTopLabel&quot; class=&quot;offcanvas-title&quot;&gt;Offcanvas Top&lt;/h5&gt;
+        &lt;button type=&quot;button&quot; class=&quot;btn-close text-reset&quot; data-bs-dismiss=&quot;offcanvas&quot; aria-label=&quot;Close&quot;&gt;&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;offcanvas-body&quot;&gt;
+        &lt;p&gt;
+            Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out
+            print, graphic or web designs. The passage is attributed to an unknown typesetter in
+            the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum
+            et Malorum for use in a type specimen book.
+        &lt;/p&gt;
+        &lt;div class=&quot;demo-inline-spacing d-flex justify-content-end&quot;&gt;
+            &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot;&gt;Continue&lt;/button&gt;
+            &lt;button type=&quot;button&quot; class=&quot;btn btn-light&quot; data-bs-dismiss=&quot;offcanvas&quot;&gt;
+                Cancel
+            &lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tabs & Pills Section -->
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h5 class="mb-0">Tabs & Pills</h5>
+                <i class="icon-base bx bx-code-alt cursor-pointer" data-bs-toggle="modal" data-bs-target="#codeModal" data-code-target="#tabsPillsCode" title="View Code"></i>
+            </div>
+            <div class="card-body">
+                <div class="nav-align-top">
+                    <ul class="nav nav-pills mb-4" role="tablist">
+                        <li class="nav-item">
+                            <button type="button" class="nav-link active" role="tab" data-bs-toggle="tab" data-bs-target="#navs-pills-top-home" aria-controls="navs-pills-top-home" aria-selected="true">
+                                Home
+                            </button>
+                        </li>
+                        <li class="nav-item">
+                            <button type="button" class="nav-link" role="tab" data-bs-toggle="tab" data-bs-target="#navs-pills-top-profile" aria-controls="navs-pills-top-profile" aria-selected="false">
+                                Profile
+                            </button>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane fade show active" id="navs-pills-top-home" role="tabpanel">
+                            <p>Home tab content.</p>
+                        </div>
+                        <div class="tab-pane fade" id="navs-pills-top-profile" role="tabpanel">
+                            <p>Profile tab content.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="d-none" id="tabsPillsCode">
+<pre><code class="language-html">&lt;div class=&quot;nav-align-top&quot;&gt;
+    &lt;ul class=&quot;nav nav-pills mb-4&quot; role=&quot;tablist&quot;&gt;
+        &lt;li class=&quot;nav-item&quot;&gt;
+            &lt;button type=&quot;button&quot; class=&quot;nav-link active&quot; role=&quot;tab&quot; data-bs-toggle=&quot;tab&quot; data-bs-target=&quot;#navs-pills-top-home&quot; aria-controls=&quot;navs-pills-top-home&quot; aria-selected=&quot;true&quot;&gt;
+                Home
+            &lt;/button&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;nav-item&quot;&gt;
+            &lt;button type=&quot;button&quot; class=&quot;nav-link&quot; role=&quot;tab&quot; data-bs-toggle=&quot;tab&quot; data-bs-target=&quot;#navs-pills-top-profile&quot; aria-controls=&quot;navs-pills-top-profile&quot; aria-selected=&quot;false&quot;&gt;
+                Profile
+            &lt;/button&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div class=&quot;tab-content&quot;&gt;
+        &lt;div class=&quot;tab-pane fade show active&quot; id=&quot;navs-pills-top-home&quot; role=&quot;tabpanel&quot;&gt;
+            &lt;p&gt;Home tab content.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;tab-pane fade&quot; id=&quot;navs-pills-top-profile&quot; role=&quot;tabpanel&quot;&gt;
+            &lt;p&gt;Profile tab content.&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+        </div>
+    </div>
+
+    <!-- Select2 Section -->
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h5 class="mb-0">Select2</h5>
+                <i class="icon-base bx bx-code-alt cursor-pointer" data-bs-toggle="modal" data-bs-target="#codeModal" data-code-target="#select2Code" title="View Code"></i>
+            </div>
+            <div class="card-body">
+                <div class="row g-6">
+                    <!-- Basic -->
+                    <div class="col-md-6">
+                        <label for="select2Basic" class="form-label">Basic</label>
+                        <select id="select2Basic" class="select2 form-select form-select-lg" data-allow-clear="true">
+                            <option value="AK">Alaska</option>
+                            <option value="HI">Hawaii</option>
+                            <option value="CA">California</option>
+                            <option value="NV">Nevada</option>
+                            <option value="OR">Oregon</option>
+                            <option value="WA">Washington</option>
+                            <option value="AZ">Arizona</option>
+                            <option value="CO">Colorado</option>
+                            <option value="ID">Idaho</option>
+                            <option value="MT">Montana</option>
+                            <option value="NE">Nebraska</option>
+                            <option value="NM">New Mexico</option>
+                            <option value="ND">North Dakota</option>
+                            <option value="UT">Utah</option>
+                            <option value="WY">Wyoming</option>
+                            <option value="AL">Alabama</option>
+                            <option value="AR">Arkansas</option>
+                            <option value="IL">Illinois</option>
+                            <option value="IA">Iowa</option>
+                            <option value="KS">Kansas</option>
+                            <option value="KY">Kentucky</option>
+                            <option value="LA">Louisiana</option>
+                            <option value="MN">Minnesota</option>
+                            <option value="MS">Mississippi</option>
+                            <option value="MO">Missouri</option>
+                            <option value="OK">Oklahoma</option>
+                            <option value="SD">South Dakota</option>
+                            <option value="TX">Texas</option>
+                            <option value="TN">Tennessee</option>
+                            <option value="WI">Wisconsin</option>
+                            <option value="CT">Connecticut</option>
+                            <option value="DE">Delaware</option>
+                            <option value="FL">Florida</option>
+                            <option value="GA">Georgia</option>
+                            <option value="IN">Indiana</option>
+                            <option value="ME">Maine</option>
+                            <option value="MD">Maryland</option>
+                            <option value="MA">Massachusetts</option>
+                            <option value="MI">Michigan</option>
+                            <option value="NH">New Hampshire</option>
+                            <option value="NJ">New Jersey</option>
+                            <option value="NY">New York</option>
+                            <option value="NC">North Carolina</option>
+                            <option value="OH">Ohio</option>
+                            <option value="PA">Pennsylvania</option>
+                            <option value="RI">Rhode Island</option>
+                            <option value="SC">South Carolina</option>
+                            <option value="VT">Vermont</option>
+                            <option value="VA">Virginia</option>
+                            <option value="WV">West Virginia</option>
+                        </select>
+                    </div>
+                    <!-- Multiple -->
+                    <div class="col-md-6">
+                        <label for="select2Multiple" class="form-label">Multiple</label>
+                        <select id="select2Multiple" class="select2 form-select" multiple>
+                            <optgroup label="Alaskan/Hawaiian Time Zone">
+                                <option value="AK">Alaska</option>
+                                <option value="HI">Hawaii</option>
+                            </optgroup>
+                            <optgroup label="Pacific Time Zone">
+                                <option value="CA">California</option>
+                                <option value="NV">Nevada</option>
+                                <option value="OR">Oregon</option>
+                                <option value="WA">Washington</option>
+                            </optgroup>
+                            <optgroup label="Mountain Time Zone">
+                                <option value="AZ">Arizona</option>
+                                <option value="CO" selected>Colorado</option>
+                                <option value="ID">Idaho</option>
+                                <option value="MT">Montana</option>
+                                <option value="NE">Nebraska</option>
+                                <option value="NM">New Mexico</option>
+                                <option value="ND">North Dakota</option>
+                                <option value="UT">Utah</option>
+                                <option value="WY">Wyoming</option>
+                            </optgroup>
+                            <optgroup label="Central Time Zone">
+                                <option value="AL">Alabama</option>
+                                <option value="AR">Arkansas</option>
+                                <option value="IL">Illinois</option>
+                                <option value="IA">Iowa</option>
+                                <option value="KS">Kansas</option>
+                                <option value="KY">Kentucky</option>
+                                <option value="LA">Louisiana</option>
+                                <option value="MN">Minnesota</option>
+                                <option value="MS">Mississippi</option>
+                                <option value="MO">Missouri</option>
+                                <option value="OK">Oklahoma</option>
+                                <option value="SD">South Dakota</option>
+                                <option value="TX">Texas</option>
+                                <option value="TN">Tennessee</option>
+                                <option value="WI">Wisconsin</option>
+                            </optgroup>
+                            <optgroup label="Eastern Time Zone">
+                                <option value="CT">Connecticut</option>
+                                <option value="DE">Delaware</option>
+                                <option value="FL" selected>Florida</option>
+                                <option value="GA">Georgia</option>
+                                <option value="IN">Indiana</option>
+                                <option value="ME">Maine</option>
+                                <option value="MD">Maryland</option>
+                                <option value="MA">Massachusetts</option>
+                                <option value="MI">Michigan</option>
+                                <option value="NH">New Hampshire</option>
+                                <option value="NJ">New Jersey</option>
+                                <option value="NY">New York</option>
+                                <option value="NC">North Carolina</option>
+                                <option value="OH">Ohio</option>
+                                <option value="PA">Pennsylvania</option>
+                                <option value="RI">Rhode Island</option>
+                                <option value="SC">South Carolina</option>
+                                <option value="VT">Vermont</option>
+                                <option value="VA">Virginia</option>
+                                <option value="WV">West Virginia</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="d-none" id="select2Code">
+<pre><code class="language-html">&lt;div class="col-12"&gt;
+  &lt;div class="card"&gt;
+    &lt;h5 class="card-header"&gt;Select2&lt;/h5&gt;
+    &lt;div class="card-body"&gt;
+      &lt;div class="row g-6"&gt;
+
+        &lt;!-- Basic --&gt;
+        &lt;div class="col-md-6"&gt;
+          &lt;label class="form-label"&gt;Basic&lt;/label&gt;
+          &lt;select class="select2 form-select form-select-lg"&gt;
+            &lt;option value="AK"&gt;Alaska&lt;/option&gt;
+            &lt;option value="HI"&gt;Hawaii&lt;/option&gt;
+            &lt;option value="CA"&gt;California&lt;/option&gt;
+            &lt;option value="NV"&gt;Nevada&lt;/option&gt;
+          &lt;/select&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Multiple --&gt;
+        &lt;div class="col-md-6"&gt;
+          &lt;label class="form-label"&gt;Multiple&lt;/label&gt;
+          &lt;select class="select2 form-select" multiple&gt;
+            &lt;optgroup label="Pacific Time Zone"&gt;
+              &lt;option value="CA"&gt;California&lt;/option&gt;
+              &lt;option value="NV"&gt;Nevada&lt;/option&gt;
+            &lt;/optgroup&gt;
+            &lt;optgroup label="Eastern Time Zone"&gt;
+              &lt;option value="FL"&gt;Florida&lt;/option&gt;
+              &lt;option value="NY"&gt;New York&lt;/option&gt;
+            &lt;/optgroup&gt;
+          &lt;/select&gt;
+        &lt;/div&gt;
+
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+    </code></pre>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tagify Section -->
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h5 class="mb-0">Tagify</h5>
+                <i class="icon-base bx bx-code-alt cursor-pointer" data-bs-toggle="modal" data-bs-target="#codeModal" data-code-target="#tagifyCode" title="View Code"></i>
+            </div>
+            <div class="card-body">
+                <div class="row g-6">
+                    <!-- Basic -->
+                    <div class="col-md-6">
+                        <label for="TagifyBasic" class="form-label">Basic</label>
+                        <input id="TagifyBasic" class="form-control" name="TagifyBasic" value="Tag1, Tag2, Tag3" />
+                    </div>
+                    <!-- Custom Suggestions: Inline -->
+                    <div class="col-md-6">
+                        <label for="TagifyCustomInlineSuggestion" class="form-label">Custom Inline Suggestions</label>
+                        <input id="TagifyCustomInlineSuggestion"
+                               name="TagifyCustomInlineSuggestion"
+                               class="form-control"
+                               placeholder="select technologies"
+                               value="css, html, javascript" />
+                    </div>
+                    <!-- Custom Suggestions: List -->
+                    <div class="col-md-6">
+                        <label for="TagifyCustomListSuggestion" class="form-label">Custom List Suggestions</label>
+                        <input id="TagifyCustomListSuggestion"
+                               name="TagifyCustomListSuggestion"
+                               class="form-control"
+                               placeholder="select technologies"
+                               value="css, html, php" />
+                    </div>
+                    <!-- Users List -->
+                    <div class="col-md-6">
+                        <label for="TagifyUserList" class="form-label">Users List</label>
+                        <input id="TagifyUserList"
+                               name="TagifyUserList"
+                               class="form-control"
+                               value="abatisse2@nih.gov, Justinian Hattersley" />
+                    </div>
+                    <!-- Email -->
+                    <div class="col-md-6">
+                        <label for="TagifyEmailList" class="form-label d-block">Email List</label>
+                        <input id="TagifyEmailList" class="tagify-email-list" value="some56.name@website.com" />
+                        <button type="button" class="btn btn-sm rounded-pill btn-icon btn-outline-primary mb-1">
+                            <span class="icon-base bx bx-plus icon-20px"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="d-none" id="tagifyCode">
+<pre><code class="language-html">
+&lt;!-- Tagify --&gt;
+&lt;div class="col-12"&gt;
+  &lt;div class="card"&gt;
+    &lt;h5 class="card-header"&gt;Tagify&lt;/h5&gt;
+    &lt;div class="card-body"&gt;
+      &lt;div class="row g-6"&gt;
+
+        &lt;!-- Basic --&gt;
+        &lt;div class="col-md-6"&gt;
+          &lt;label class="form-label"&gt;Basic&lt;/label&gt;
+          &lt;input class="form-control"
+                 value="Tag1, Tag2, Tag3" /&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Custom Inline Suggestions --&gt;
+        &lt;div class="col-md-6"&gt;
+          &lt;label class="form-label"&gt;Custom Inline Suggestions&lt;/label&gt;
+          &lt;input class="form-control"
+                 placeholder="select technologies"
+                 value="css, html, javascript" /&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Custom List Suggestions --&gt;
+        &lt;div class="col-md-6"&gt;
+          &lt;label class="form-label"&gt;Custom List Suggestions&lt;/label&gt;
+          &lt;input class="form-control"
+                 placeholder="select technologies"
+                 value="css, html, php" /&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Users List --&gt;
+        &lt;div class="col-md-6"&gt;
+          &lt;label class="form-label"&gt;Users List&lt;/label&gt;
+          &lt;input class="form-control"
+                 value="abatisse2@nih.gov, Justinian Hattersley" /&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Email --&gt;
+        &lt;div class="col-md-6"&gt;
+          &lt;label class="form-label d-block"&gt;Email List&lt;/label&gt;
+          &lt;input class="tagify-email-list"
+                 value="some56.name@website.com" /&gt;
+          &lt;button type="button"
+                  class="btn btn-sm rounded-pill btn-icon btn-outline-primary"&gt;
+            &lt;i class="bx bx-plus"&gt;&lt;/i&gt;
+          &lt;/button&gt;
+        &lt;/div&gt;
+
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- /Tagify --&gt;
+    </code></pre>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap Select Section -->
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h5 class="mb-0">Bootstrap Select</h5>
+                <i class="icon-base bx bx-code-alt cursor-pointer" data-bs-toggle="modal" data-bs-target="#codeModal" data-code-target="#bootstrapSelectCode" title="View Code"></i>
+            </div>
+            <div class="card-body">
+                <div class="row g-6">
+                    <!-- Basic -->
+                    <div class="col-md-6">
+                        <label for="selectpickerBasic" class="form-label">Basic</label>
+                        <select id="selectpickerBasic" class="selectpicker w-100" data-style="btn-default">
+                            <option>Rocky</option>
+                            <option>Pulp Fiction</option>
+                            <option>The Godfather</option>
+                        </select>
+                    </div>
+                    <!-- Multiple -->
+                    <div class="col-md-6">
+                        <label for="selectpickerMultiple" class="form-label">Multiple</label>
+                        <select id="selectpickerMultiple"
+                                class="selectpicker w-100"
+                                data-style="btn-default"
+                                multiple
+                                data-icon-base="icon-base bx"
+                                data-tick-icon="bx-check text-primary">
+                            <option>Rocky</option>
+                            <option>Pulp Fiction</option>
+                            <option>The Godfather</option>
+                        </select>
+                    </div>
+                    <!-- Live Search -->
+                    <div class="col-md-6">
+                        <label for="selectpickerLiveSearch" class="form-label">Live Search</label>
+                        <select id="selectpickerLiveSearch"
+                                class="selectpicker w-100"
+                                data-style="btn-default"
+                                data-live-search="true">
+                            <option data-tokens="ketchup mustard">Hot Dog, Fries and a Soda</option>
+                            <option data-tokens="mustard">Burger, Shake and a Smile</option>
+                            <option data-tokens="frosting">Sugar, Spice and all things nice</option>
+                        </select>
+                    </div>
+                    <!-- Select / Deselect All -->
+                    <div class="col-md-6">
+                        <label for="selectpickerSelectDeselect" class="form-label">Select / Deselect All</label>
+                        <select id="selectpickerSelectDeselect"
+                                class="selectpicker w-100"
+                                data-style="btn-default"
+                                multiple
+                                data-actions-box="true">
+                            <option>Rocky</option>
+                            <option>Pulp Fiction</option>
+                            <option>The Godfather</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="d-none" id="bootstrapSelectCode">
+<pre><code class="language-html">
+&lt;!-- Bootstrap Select --&gt;
+&lt;div class="col-12"&gt;
+  &lt;div class="card"&gt;
+    &lt;h5 class="card-header"&gt;Bootstrap Select&lt;/h5&gt;
+    &lt;div class="card-body"&gt;
+      &lt;div class="row g-6"&gt;
+
+        &lt;!-- Basic --&gt;
+        &lt;div class="col-md-6"&gt;
+          &lt;label class="form-label"&gt;Basic&lt;/label&gt;
+          &lt;select class="selectpicker w-100" data-style="btn-default"&gt;
+            &lt;option&gt;Rocky&lt;/option&gt;
+            &lt;option&gt;Pulp Fiction&lt;/option&gt;
+            &lt;option&gt;The Godfather&lt;/option&gt;
+          &lt;/select&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Multiple --&gt;
+        &lt;div class="col-md-6"&gt;
+          &lt;label class="form-label"&gt;Multiple&lt;/label&gt;
+          &lt;select class="selectpicker w-100" data-style="btn-default" multiple
+                  data-icon-base="icon-base bx" data-tick-icon="bx-check text-primary"&gt;
+            &lt;option&gt;Rocky&lt;/option&gt;
+            &lt;option&gt;Pulp Fiction&lt;/option&gt;
+            &lt;option&gt;The Godfather&lt;/option&gt;
+          &lt;/select&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Live Search --&gt;
+        &lt;div class="col-md-6"&gt;
+          &lt;label class="form-label"&gt;Live Search&lt;/label&gt;
+          &lt;select class="selectpicker w-100" data-style="btn-default" data-live-search="true"&gt;
+            &lt;option data-tokens="ketchup mustard"&gt;Hot Dog, Fries and a Soda&lt;/option&gt;
+            &lt;option data-tokens="mustard"&gt;Burger, Shake and a Smile&lt;/option&gt;
+            &lt;option data-tokens="frosting"&gt;Sugar, Spice and all things nice&lt;/option&gt;
+          &lt;/select&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Select / Deselect All --&gt;
+        &lt;div class="col-md-6"&gt;
+          &lt;label class="form-label"&gt;Select / Deselect All&lt;/label&gt;
+          &lt;select class="selectpicker w-100" data-style="btn-default" multiple data-actions-box="true"&gt;
+            &lt;option&gt;Rocky&lt;/option&gt;
+            &lt;option&gt;Pulp Fiction&lt;/option&gt;
+            &lt;option&gt;The Godfather&lt;/option&gt;
+          &lt;/select&gt;
+        &lt;/div&gt;
+
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- /Bootstrap Select --&gt;
+    </code></pre>
+            </div>
+        </div>
+    </div>
+
+    <!-- Flatpickr Section -->
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h5 class="mb-0">Flatpickr</h5>
+                <i class="icon-base bx bx-code-alt cursor-pointer" data-bs-toggle="modal" data-bs-target="#codeModal" data-code-target="#flatpickrCode" title="View Code"></i>
+            </div>
+            <div class="card-body">
+                <div class="row g-6">
+                    <!-- Date Picker-->
+                    <div class="col-md-6">
+                        <label for="flatpickr-friendly" class="form-label">Date Picker</label>
+                        <input type="text"
+                               class="form-control flatpickr-friendly"
+                               placeholder="15-Jan-2026">
+                    </div>
+                    <!-- /Date Picker-->
+                    <!-- Range Picker-->
+                    <div class="col-md-6">
+                        <label for="flatpickr-range" class="form-label">Range Picker</label>
+                        <input type="text"
+                               class="form-control flatpickr-range"
+                               placeholder="DD-MM-YYYY to DD-MM-YYYY" />
+                    </div>
+                    <!-- /Range Picker-->
+                    <!-- Datetime Picker-->
+                    <div class="col-md-6">
+                        <label for="flatpickr-datetime" class="form-label">Datetime Picker</label>
+                        <input type="text"
+                               class="form-control flatpickr-datetime"
+                               placeholder="DD-MM-YYYY HH:MM" />
+                    </div>
+                    <!-- /Datetime Picker-->
+                    <!-- Time Picker-->
+                    <div class="col-md-6">
+                        <label for="flatpickr-time" class="form-label">Time Picker</label>
+                        <input type="text" class="form-control flatpickr-time" placeholder="HH:MM" />
+                    </div>
+                    <!-- /Time Picker -->
+                </div>
+            </div>
+            <div class="d-none" id="flatpickrCode">
+<pre><code class="language-html">&lt;div class=&quot;row g-6&quot;&gt;
+    &lt;!-- Date Picker--&gt;
+    &lt;div class=&quot;col-md-6&quot;&gt;
+        &lt;label for=&quot;flatpickr-friendly&quot; class=&quot;form-label&quot;&gt;Date Picker&lt;/label&gt;
+        &lt;input type=&quot;text&quot;
+                class=&quot;form-control flatpickr-friendly&quot;
+                placeholder=&quot;15-Jan-2026&quot;&gt;
+    &lt;/div&gt;
+    &lt;!-- /Date Picker--&gt;
+    &lt;!-- Range Picker--&gt;
+    &lt;div class=&quot;col-md-6&quot;&gt;
+        &lt;label for=&quot;flatpickr-range&quot; class=&quot;form-label&quot;&gt;Range Picker&lt;/label&gt;
+        &lt;input type=&quot;text&quot;
+                class=&quot;form-control flatpickr-range&quot;
+                placeholder=&quot;DD-MM-YYYY to DD-MM-YYYY&quot; /&gt;
+    &lt;/div&gt;
+    &lt;!-- /Range Picker--&gt;
+    &lt;!-- Datetime Picker--&gt;
+    &lt;div class=&quot;col-md-6&quot;&gt;
+        &lt;label for=&quot;flatpickr-datetime&quot; class=&quot;form-label&quot;&gt;Datetime Picker&lt;/label&gt;
+        &lt;input type=&quot;text&quot;
+                class=&quot;form-control flatpickr-datetime&quot;
+                placeholder=&quot;DD-MM-YYYY HH:MM&quot; /&gt;
+    &lt;/div&gt;
+    &lt;!-- /Datetime Picker--&gt;
+    &lt;!-- Time Picker--&gt;
+    &lt;div class=&quot;col-md-6&quot;&gt;
+        &lt;label for=&quot;flatpickr-time&quot; class=&quot;form-label&quot;&gt;Time Picker&lt;/label&gt;
+        &lt;input type=&quot;text&quot; class=&quot;form-control flatpickr-time&quot; placeholder=&quot;HH:MM&quot;/&gt;
+    &lt;/div&gt;
+    &lt;!-- /Time Picker --&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+        </div>
+    </div>
+
+    <!-- Alerts Section -->
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h5 class="mb-0">Alerts</h5>
+                <i class="icon-base bx bx-code-alt cursor-pointer" data-bs-toggle="modal" data-bs-target="#codeModal" data-code-target="#alertsCode" title="View Code"></i>
+            </div>
+            <div class="card-body">
+                <div class="alert alert-outline-danger" role="alert">
+                    This is a danger outline alert — check it out!
+                </div>
+
+                <div class="alert alert-outline-dark" role="alert">
+                    This is a dark outline alert — check it out!
+                </div>
+
+                <div class="alert alert-danger alert-dismissible" role="alert">
+                    This is a danger dismissible alert — check it out!
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                <div class="alert alert-dark alert-dismissible mb-0" role="alert">
+                    This is a dark dismissible alert — check it out!
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            </div>
+            <div class="d-none" id="alertsCode">
+<pre><code class="language-html">
+&lt;div class="row g-6 mb-6"&gt;
+    &lt;!-- Alerts --&gt;
+    &lt;div class="col-md"&gt;
+        &lt;div class="card"&gt;
+            &lt;h5 class="card-header"&gt;Alerts&lt;/h5&gt;
+            &lt;div class="card-body"&gt;
+
+                &lt;div class="alert alert-outline-danger" role="alert"&gt;
+                    This is a danger outline alert — check it out!
+                &lt;/div&gt;
+
+                &lt;div class="alert alert-outline-dark" role="alert"&gt;
+                    This is a dark outline alert — check it out!
+                &lt;/div&gt;
+
+                &lt;div class="alert alert-danger alert-dismissible" role="alert"&gt;
+                    This is a danger dismissible alert — check it out!
+                    &lt;button type="button" class="btn-close"
+                            data-bs-dismiss="alert"
+                            aria-label="Close"&gt;&lt;/button&gt;
+                &lt;/div&gt;
+
+                &lt;div class="alert alert-dark alert-dismissible mb-0" role="alert"&gt;
+                    This is a dark dismissible alert — check it out!
+                    &lt;button type="button" class="btn-close"
+                            data-bs-dismiss="alert"
+                            aria-label="Close"&gt;&lt;/button&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;!--/ Alerts --&gt;
+&lt;/div&gt;
+</code></pre>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Breadcrumb Section -->
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h5 class="mb-0">Breadcrumbs</h5>
+                <i class="icon-base bx bx-code-alt cursor-pointer" data-bs-toggle="modal" data-bs-target="#codeModal" data-code-target="#breadcrumbCode" title="View Code"></i>
+            </div>
+            <div class="card-body">
+                <!-- Basic Breadcrumb -->
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <a href="javascript:void(0);">Home</a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <a href="javascript:void(0);">Library</a>
+                        </li>
+                        <li class="breadcrumb-item active">Data</li>
+                    </ol>
+                </nav>
+                <!-- Basic Breadcrumb -->
+                <!-- Custom style1 Breadcrumb -->
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb breadcrumb-custom-icon">
+                        <li class="breadcrumb-item">
+                            <a href="javascript:void(0);">Home</a>
+                            <i class="breadcrumb-icon icon-base bx bx-chevron-right align-middle"></i>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <a href="javascript:void(0);">Library</a>
+                            <i class="breadcrumb-icon icon-base bx bx-chevron-right align-middle"></i>
+                        </li>
+                        <li class="breadcrumb-item active">Data</li>
+                    </ol>
+                </nav>
+                <!--/ Custom style1 Breadcrumb -->
+                <!-- Custom style2 Breadcrumb -->
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <a href="javascript:void(0);">Home</a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <a href="javascript:void(0);">Library</a>
+                            <i class="breadcrumb-icon icon-base bx bx-chevron-down align-middle"></i>
+                        </li>
+                        <li class="breadcrumb-item active">Data</li>
+
+                    </ol>
+                </nav>
+                <!--/ Custom style2 Breadcrumb -->
+            </div>
+            <div class="d-none" id="breadcrumbCode">
+<pre><code class="language-html">
+&lt;div class="col-lg-12"&gt;
+  &lt;div class="card"&gt;
+    &lt;h5 class="card-header"&gt;Breadcrumbs&lt;/h5&gt;
+    &lt;div class="card-body"&gt;
+
+      &lt;!-- Basic Breadcrumb --&gt;
+      &lt;nav aria-label="breadcrumb"&gt;
+        &lt;ol class="breadcrumb"&gt;
+          &lt;li class="breadcrumb-item"&gt;
+            &lt;a href="javascript:void(0);"&gt;Home&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class="breadcrumb-item"&gt;
+            &lt;a href="javascript:void(0);"&gt;Library&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class="breadcrumb-item active"&gt;Data&lt;/li&gt;
+        &lt;/ol&gt;
+      &lt;/nav&gt;
+
+      &lt;!-- Custom Icon Breadcrumb --&gt;
+      &lt;nav aria-label="breadcrumb"&gt;
+        &lt;ol class="breadcrumb breadcrumb-custom-icon"&gt;
+          &lt;li class="breadcrumb-item"&gt;
+            &lt;a href="javascript:void(0);"&gt;Home&lt;/a&gt;
+            &lt;i class="breadcrumb-icon icon-base bx bx-chevron-right align-middle"&gt;&lt;/i&gt;
+          &lt;/li&gt;
+          &lt;li class="breadcrumb-item"&gt;
+            &lt;a href="javascript:void(0);"&gt;Library&lt;/a&gt;
+            &lt;i class="breadcrumb-icon icon-base bx bx-chevron-right align-middle"&gt;&lt;/i&gt;
+          &lt;/li&gt;
+          &lt;li class="breadcrumb-item active"&gt;Data&lt;/li&gt;
+        &lt;/ol&gt;
+      &lt;/nav&gt;
+
+      &lt;!-- Custom Style Breadcrumb --&gt;
+      &lt;nav aria-label="breadcrumb"&gt;
+        &lt;ol class="breadcrumb"&gt;
+          &lt;li class="breadcrumb-item"&gt;
+            &lt;a href="javascript:void(0);"&gt;Home&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class="breadcrumb-item"&gt;
+            &lt;a href="javascript:void(0);"&gt;Library&lt;/a&gt;
+            &lt;i class="breadcrumb-icon icon-base bx bx-chevron-down align-middle"&gt;&lt;/i&gt;
+          &lt;/li&gt;
+          &lt;li class="breadcrumb-item active"&gt;Data&lt;/li&gt;
+        &lt;/ol&gt;
+      &lt;/nav&gt;
+
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+    </code></pre>
+            </div>
+        </div>
+    </div>
+
+    <!-- Avatar Section -->
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h5 class="mb-0">Avatars</h5>
+                <i class="icon-base bx bx-code-alt cursor-pointer" data-bs-toggle="modal" data-bs-target="#codeModal" data-code-target="#avatarCode" title="View Code"></i>
+            </div>
+            <div class="card-body">
+                <div class="row gy-6">
+                    <div class="col-md-12">
+                        <!-- Avatar Sizes -->
+                        <h6 class="card-title">Sizes</h6>
+                        <div class="d-flex align-items-center flex-wrap">
+                            <div class="avatar avatar-xs me-2">
+                                <img src="~/gtlib/dependencylib/sneatlayout/assets/img/avatars/1.png" alt="Avatar" class="rounded-circle" />
+                            </div>
+                            <div class="avatar avatar-sm me-2">
+                                <img src="~/gtlib/dependencylib/sneatlayout/assets/img/avatars/1.png" alt="Avatar" class="rounded-circle" />
+                            </div>
+                            <div class="avatar me-2">
+                                <img src="~/gtlib/dependencylib/sneatlayout/assets/img/avatars/1.png" alt="Avatar" class="rounded-circle" />
+                            </div>
+                            <div class="avatar avatar-md me-2">
+                                <img src="~/gtlib/dependencylib/sneatlayout/assets/img/avatars/1.png" alt="Avatar" class="rounded-circle" />
+                            </div>
+                            <div class="avatar avatar-lg me-2">
+                                <img src="~/gtlib/dependencylib/sneatlayout/assets/img/avatars/1.png" alt="Avatar" class="rounded-circle" />
+                            </div>
+                            <div class="avatar avatar-xl">
+                                <img src="~/gtlib/dependencylib/sneatlayout/assets/img/avatars/1.png" alt="Avatar" class="rounded-circle" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <h6 class="card-title">Shapes</h6>
+                        <div class="d-flex align-items-center my-4">
+                            <div class="avatar me-2">
+                                <img src="~/gtlib/dependencylib/sneatlayout/assets/img/avatars/1.png" alt="Avatar" class="rounded-circle" />
+                            </div>
+                            <div class="avatar me-2">
+                                <img src="~/gtlib/dependencylib/sneatlayout/assets/img/avatars/1.png" alt="Avatar" class="rounded" />
+                            </div>
+                            <div class="avatar">
+                                <img src="~/gtlib/dependencylib/sneatlayout/assets/img/avatars/1.png" alt="Avatar" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <h6 class="card-title">Avatar Group</h6>
+                        <div class="row">
+                            <div class="col-md-4 col-sm-6">
+                                <small class="fw-medium">Default</small>
+                                <div class="d-flex align-items-center avatar-group my-4">
+                                    <div class="avatar">
+                                        <img src="~/gtlib/dependencylib/sneatlayout/assets/img/avatars/5.png" alt="Avatar" class="rounded-circle" />
+                                    </div>
+                                    <div class="avatar">
+                                        <img src="~/gtlib/dependencylib/sneatlayout/assets/img/avatars/12.png" alt="Avatar" class="rounded-circle" />
+                                    </div>
+                                    <div class="avatar">
+                                        <img src="~/gtlib/dependencylib/sneatlayout/assets/img/avatars/6.png" alt="Avatar" class="rounded-circle" />
+                                    </div>
+                                    <div class="avatar">
+                                        <img src="~/gtlib/dependencylib/sneatlayout/assets/img/avatars/10.png" alt="Avatar" class="rounded-circle" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6">
+                                <small class="fw-medium">Pull Up with Tooltip</small>
+                                <ul class="list-unstyled m-0 d-flex align-items-center avatar-group my-4">
+                                    <li data-bs-toggle="tooltip"
+                                        data-popup="tooltip-custom"
+                                        data-bs-placement="top"
+                                        title="Vinnie Mostowy"
+                                        class="avatar pull-up">
+                                        <img class="rounded-circle" src="~/gtlib/dependencylib/sneatlayout/assets/img/avatars/5.png" alt="Avatar" />
+                                    </li>
+                                    <li data-bs-toggle="tooltip"
+                                        data-popup="tooltip-custom"
+                                        data-bs-placement="top"
+                                        title="Allen Rieske"
+                                        class="avatar pull-up">
+                                        <img class="rounded-circle" src="~/gtlib/dependencylib/sneatlayout/assets/img/avatars/12.png" alt="Avatar" />
+                                    </li>
+                                    <li data-bs-toggle="tooltip"
+                                        data-popup="tooltip-custom"
+                                        data-bs-placement="top"
+                                        title="Julee Rossignol"
+                                        class="avatar pull-up">
+                                        <img class="rounded-circle" src="~/gtlib/dependencylib/sneatlayout/assets/img/avatars/6.png" alt="Avatar" />
+                                    </li>
+                                    <li data-bs-toggle="tooltip"
+                                        data-popup="tooltip-custom"
+                                        data-bs-placement="top"
+                                        title="Darcey Nooner"
+                                        class="avatar pull-up">
+                                        <img class="rounded-circle" src="~/gtlib/dependencylib/sneatlayout/assets/img/avatars/10.png" alt="Avatar" />
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-md-4 col-sm-6">
+                                <small class="fw-medium">Avatar with count </small>
+                                <div class="d-flex align-items-center avatar-group my-4">
+                                    <div class="avatar">
+                                        <img src="~/gtlib/dependencylib/sneatlayout/assets/img/avatars/5.png" alt="Avatar" class="rounded-circle pull-up" />
+                                    </div>
+                                    <div class="avatar">
+                                        <img src="~/gtlib/dependencylib/sneatlayout/assets/img/avatars/12.png" alt="Avatar" class="rounded-circle pull-up" />
+                                    </div>
+                                    <div class="avatar">
+                                        <img src="~/gtlib/dependencylib/sneatlayout/assets/img/avatars/6.png" alt="Avatar" class="rounded-circle pull-up" />
+                                    </div>
+                                    <div class="avatar">
+                                        <span class="avatar-initial rounded-circle pull-up"
+                                              data-bs-toggle="tooltip"
+                                              data-bs-placement="bottom"
+                                              title="3 more">+3</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="d-none" id="avatarCode">
+<pre><code class="language-html">
+&lt;!-- Avatar Sizes --&gt;
+&lt;h6 class="card-title"&gt;Sizes&lt;/h6&gt;
+&lt;div class="d-flex align-items-center flex-wrap"&gt;
+    &lt;div class="avatar avatar-xs me-2"&gt;
+        &lt;img src="~/gtlib/dependencylib/sneatlayout/assets/img/avatars/1.png" alt="Avatar" class="rounded-circle" /&gt;
+    &lt;/div&gt;
+    &lt;div class="avatar avatar-sm me-2"&gt;
+        &lt;img src="~/gtlib/dependencylib/sneatlayout/assets/img/avatars/1.png" alt="Avatar" class="rounded-circle" /&gt;
+    &lt;/div&gt;
+    &lt;div class="avatar me-2"&gt;
+        &lt;img src="~/gtlib/dependencylib/sneatlayout/assets/img/avatars/1.png" alt="Avatar" class="rounded-circle" /&gt;
+    &lt;/div&gt;
+    &lt;div class="avatar avatar-md me-2"&gt;
+        &lt;img src="~/gtlib/dependencylib/sneatlayout/assets/img/avatars/1.png" alt="Avatar" class="rounded-circle" /&gt;
+    &lt;/div&gt;
+    &lt;div class="avatar avatar-lg me-2"&gt;
+        &lt;img src="~/gtlib/dependencylib/sneatlayout/assets/img/avatars/1.png" alt="Avatar" class="rounded-circle" /&gt;
+    &lt;/div&gt;
+    &lt;div class="avatar avatar-xl"&gt;
+        &lt;img src="~/gtlib/dependencylib/sneatlayout/assets/img/avatars/1.png" alt="Avatar" class="rounded-circle" /&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- Avatar Shapes --&gt;
+&lt;h6 class="card-title"&gt;Shapes&lt;/h6&gt;
+&lt;div class="d-flex align-items-center my-4"&gt;
+    &lt;div class="avatar me-2"&gt;
+        &lt;img src="~/gtlib/dependencylib/sneatlayout/assets/img/avatars/1.png" alt="Avatar" class="rounded-circle" /&gt;
+    &lt;/div&gt;
+    &lt;div class="avatar me-2"&gt;
+        &lt;img src="~/gtlib/dependencylib/sneatlayout/assets/img/avatars/1.png" alt="Avatar" class="rounded" /&gt;
+    &lt;/div&gt;
+    &lt;div class="avatar"&gt;
+        &lt;img src="~/gtlib/dependencylib/sneatlayout/assets/img/avatars/1.png" alt="Avatar" /&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- Avatar Group --&gt;
+&lt;h6 class="card-title"&gt;Avatar Group&lt;/h6&gt;
+&lt;div class="row"&gt;
+    &lt;div class="col-md-4 col-sm-6"&gt;
+        &lt;small class="fw-medium"&gt;Default&lt;/small&gt;
+        &lt;div class="d-flex align-items-center avatar-group my-4"&gt;
+            &lt;div class="avatar"&gt;
+                &lt;img src="~/gtlib/dependencylib/sneatlayout/assets/img/avatars/5.png" alt="Avatar" class="rounded-circle" /&gt;
+            &lt;/div&gt;
+            &lt;div class="avatar"&gt;
+                &lt;img src="~/gtlib/dependencylib/sneatlayout/assets/img/avatars/12.png" alt="Avatar" class="rounded-circle" /&gt;
+            &lt;/div&gt;
+            &lt;div class="avatar"&gt;
+                &lt;img src="~/gtlib/dependencylib/sneatlayout/assets/img/avatars/6.png" alt="Avatar" class="rounded-circle" /&gt;
+            &lt;/div&gt;
+            &lt;div class="avatar"&gt;
+                &lt;img src="~/gtlib/dependencylib/sneatlayout/assets/img/avatars/10.png" alt="Avatar" class="rounded-circle" /&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="col-md-4 col-sm-6"&gt;
+        &lt;small class="fw-medium"&gt;Pull Up with Tooltip&lt;/small&gt;
+        &lt;ul class="list-unstyled m-0 d-flex align-items-center avatar-group my-4"&gt;
+            &lt;li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" title="Vinnie Mostowy" class="avatar pull-up"&gt;
+                &lt;img class="rounded-circle" src="~/gtlib/dependencylib/sneatlayout/assets/img/avatars/5.png" alt="Avatar" /&gt;
+            &lt;/li&gt;
+            &lt;li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" title="Allen Rieske" class="avatar pull-up"&gt;
+                &lt;img class="rounded-circle" src="~/gtlib/dependencylib/sneatlayout/assets/img/avatars/12.png" alt="Avatar" /&gt;
+            &lt;/li&gt;
+            &lt;li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" title="Julee Rossignol" class="avatar pull-up"&gt;
+                &lt;img class="rounded-circle" src="~/gtlib/dependencylib/sneatlayout/assets/img/avatars/6.png" alt="Avatar" /&gt;
+            &lt;/li&gt;
+            &lt;li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" title="Darcey Nooner" class="avatar pull-up"&gt;
+                &lt;img class="rounded-circle" src="~/gtlib/dependencylib/sneatlayout/assets/img/avatars/10.png" alt="Avatar" /&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;div class="col-md-4 col-sm-6"&gt;
+        &lt;small class="fw-medium"&gt;Avatar with count &lt;/small&gt;
+        &lt;div class="d-flex align-items-center avatar-group my-4"&gt;
+            &lt;div class="avatar"&gt;
+                &lt;img src="~/gtlib/dependencylib/sneatlayout/assets/img/avatars/5.png" alt="Avatar" class="rounded-circle pull-up" /&gt;
+            &lt;/div&gt;
+            &lt;div class="avatar"&gt;
+                &lt;img src="~/gtlib/dependencylib/sneatlayout/assets/img/avatars/12.png" alt="Avatar" class="rounded-circle pull-up" /&gt;
+            &lt;/div&gt;
+            &lt;div class="avatar"&gt;
+                &lt;img src="~/gtlib/dependencylib/sneatlayout/assets/img/avatars/6.png" alt="Avatar" class="rounded-circle pull-up" /&gt;
+            &lt;/div&gt;
+            &lt;div class="avatar"&gt;
+                &lt;span class="avatar-initial rounded-circle pull-up" data-bs-toggle="tooltip" data-bs-placement="bottom" title="3 more"&gt;+3&lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tooltips & Popovers Section -->
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h5 class="mb-0">Tooltips & Popovers</h5>
+                <i class="icon-base bx bx-code-alt cursor-pointer" data-bs-toggle="modal" data-bs-target="#codeModal" data-code-target="#tooltipsPopoversCode" title="View Code"></i>
+            </div>
+            <div class="card-body">
+                <div class="small fw-medium">Tooltips</div>
+                <div class="row demo-vertical-spacing">
+                    <div class="col">
+                        <button type="button" class="btn btn-outline-secondary" data-bs-toggle="tooltip" data-bs-offset="0,6" data-bs-placement="right" data-bs-html="true" title="<i class='icon-base bx bx-trending-up icon-xs' ></i> <span>Tooltip on right</span>">
+                            Right
+                        </button>
+                    </div>
+                    <div class="col">
+                        <button type="button" class="btn btn-outline-secondary" data-bs-toggle="tooltip" data-bs-offset="0,6" data-bs-placement="top" data-bs-html="true" title="<i class='icon-base bx bx-bell icon-xs' ></i> <span>Tooltip on top</span>">
+                            Top
+                        </button>
+                    </div>
+                    <div class="col">
+                        <button type="button" class="btn btn-outline-secondary" data-bs-toggle="tooltip" data-bs-offset="0,6" data-bs-placement="bottom" data-bs-html="true" title="<i class='icon-base bx bx-heart icon-xs' ></i> <span>Tooltip on bottom</span>">
+                            Bottom
+                        </button>
+                    </div>
+                    <div class="col">
+                        <button type="button" class="btn btn-outline-secondary" data-bs-toggle="tooltip" data-bs-offset="0,6" data-bs-placement="left" data-bs-html="true" title="<i class='icon-base bx bx-dollar icon-xs' ></i> <span>Tooltip on left</span>">
+                            Left
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="d-none" id="tooltipsPopoversCode">
+<pre><code class="language-html">
+&lt;div class="small fw-medium"&gt;Tooltips&lt;/div&gt;
+&lt;div class="row demo-vertical-spacing"&gt;
+    &lt;div class="col"&gt;
+        &lt;button type="button" class="btn btn-outline-secondary" data-bs-toggle="tooltip" data-bs-offset="0,6" data-bs-placement="right" data-bs-html="true" title="&lt;i class='icon-base bx bx-trending-up icon-xs' &gt;&lt;/i&gt; &lt;span&gt;Tooltip on right&lt;/span&gt;"&gt;
+            Right
+        &lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class="col"&gt;
+        &lt;button type="button" class="btn btn-outline-secondary" data-bs-toggle="tooltip" data-bs-offset="0,6" data-bs-placement="top" data-bs-html="true" title="&lt;i class='icon-base bx bx-bell icon-xs' &gt;&lt;/i&gt; &lt;span&gt;Tooltip on top&lt;/span&gt;"&gt;
+            Top
+        &lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class="col"&gt;
+        &lt;button type="button" class="btn btn-outline-secondary" data-bs-toggle="tooltip" data-bs-offset="0,6" data-bs-placement="bottom" data-bs-html="true" title="&lt;i class='icon-base bx bx-heart icon-xs' &gt;&lt;/i&gt; &lt;span&gt;Tooltip on bottom&lt;/span&gt;"&gt;
+            Bottom
+        &lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class="col"&gt;
+        &lt;button type="button" class="btn btn-outline-secondary" data-bs-toggle="tooltip" data-bs-offset="0,6" data-bs-placement="left" data-bs-html="true" title="&lt;i class='icon-base bx bx-dollar icon-xs' &gt;&lt;/i&gt; &lt;span&gt;Tooltip on left&lt;/span&gt;"&gt;
+            Left
+        &lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+            </div>
+        </div>
+    </div>
+    <!-- SweetAlert2 Section -->
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h5 class="mb-0">SweetAlert2</h5>
+                <i class="icon-base bx bx-code-alt cursor-pointer" data-bs-toggle="modal" data-bs-target="#codeModal" data-code-target="#sweetAlert2Code" title="View Code"></i>
+            </div>
+            <div class="card-body">
+                <div class="demo-inline-spacing">
+                    <button type="button" class="btn btn-success" id="type-success">Success</button>
+                    <button type="button" class="btn btn-info" id="type-info">Info</button>
+                    <button type="button" class="btn btn-warning" id="type-warning">Warning</button>
+                    <button type="button" class="btn btn-danger" id="type-error">Error</button>
+                    <button type="button" class="btn btn-secondary" id="type-question">Question</button>
+                    <button type="button" class="btn btn-primary" id="auto-close">Auto Close</button>
+                    <button type="button" class="btn btn-primary" id="confirm-color">Alert</button>
+                </div>
+            </div>
+            <div class="d-none" id="sweetAlert2Code">
+<pre><code class="language-javascript">
+// Success
+Swal.fire({
+    title: 'Good job!',
+    text: 'You clicked the button!',
+    icon: 'success',
+    customClass: {
+        confirmButton: 'btn btn-primary'
+    },
+    buttonsStyling: false
+});
+
+// Info
+Swal.fire({
+    title: 'Info!',
+    text: 'You clicked the button!',
+    icon: 'info',
+    customClass: {
+        confirmButton: 'btn btn-primary'
+    },
+    buttonsStyling: false
+});
+
+// Warning
+Swal.fire({
+    title: 'Warning!',
+    text: 'You clicked the button!',
+    icon: 'warning',
+    customClass: {
+        confirmButton: 'btn btn-primary'
+    },
+    buttonsStyling: false
+});
+
+// Error
+Swal.fire({
+    title: 'Error!',
+    text: 'You clicked the button!',
+    icon: 'error',
+    customClass: {
+        confirmButton: 'btn btn-primary'
+    },
+    buttonsStyling: false
+});
+
+// Question
+Swal.fire({
+    title: 'Question!',
+    text: 'You clicked the button!',
+    icon: 'question',
+    customClass: {
+        confirmButton: 'btn btn-primary'
+    },
+    buttonsStyling: false
+});
+
+// Auto Close
+let timerInterval;
+Swal.fire({
+    title: 'Auto close alert!',
+    html: 'I will close in &lt;b&gt;&lt;/b&gt; milliseconds.',
+    timer: 2000,
+    timerProgressBar: true,
+    didOpen: () => {
+        Swal.showLoading();
+        const b = Swal.getHtmlContainer().querySelector('b');
+        timerInterval = setInterval(() => {
+            b.textContent = Swal.getTimerLeft();
+        }, 100);
+    },
+    willClose: () => {
+        clearInterval(timerInterval);
+    }
+});
+
+// Confirm Color
+Swal.fire({
+    title: 'Are you sure?',
+    text: "You won't be able to revert this!",
+    icon: 'warning',
+    showCancelButton: true,
+    confirmButtonText: 'Yes, delete it!',
+    customClass: {
+        confirmButton: 'btn btn-primary me-3',
+        cancelButton: 'btn btn-label-secondary'
+    },
+    buttonsStyling: false
+}).then(function (result) {
+    if (result.value) {
+        Swal.fire({
+            icon: 'success',
+            title: 'Deleted!',
+            text: 'Your file has been deleted.',
+            customClass: {
+                confirmButton: 'btn btn-success'
+            }
+        });
+    }
+});
+</code></pre>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toastr Section -->
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h5 class="mb-0">Toastr</h5>
+                <i class="icon-base bx bx-code-alt cursor-pointer" data-bs-toggle="modal" data-bs-target="#codeModal" data-code-target="#toastrCode" title="View Code"></i>
+            </div>
+            <div class="card-body">
+                <div class="demo-inline-spacing">
+                    <button type="button" class="btn btn-success" id="toastr-success">Success</button>
+                    <button type="button" class="btn btn-info" id="toastr-info">Info</button>
+                    <button type="button" class="btn btn-warning" id="toastr-warning">Warning</button>
+                    <button type="button" class="btn btn-danger" id="toastr-error">Error</button>
+                </div>
+            </div>
+            <div class="d-none" id="toastrCode">
+<pre><code class="language-javascript">
+// Success
+toastr.success('This is a success message!', 'Success');
+
+// Info
+toastr.info('This is an info message!', 'Info');
+
+// Warning
+toastr.warning('This is a warning message!', 'Warning');
+
+// Error
+toastr.error('This is an error message!', 'Error');
+</code></pre>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- Modal Markup -->
+<div class="modal fade" id="basicModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel1">Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col mb-6">
+                        <label for="nameBasic" class="form-label">Name</label>
+                        <input type="text" id="nameBasic" class="form-control" placeholder="Enter Name" />
+                    </div>
+                </div>
+                <div class="row g-6">
+                    <div class="col mb-0">
+                        <label for="emailBasic" class="form-label">Email</label>
+                        <input type="email" id="emailBasic" class="form-control" placeholder="xxxx@xxx.xx" />
+                    </div>
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-light" data-bs-dismiss="modal">
+                    Close
+                </button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Offcanvas Markup -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasEnd" aria-labelledby="offcanvasEndLabel">
+    <div class="offcanvas-header">
+        <h5 id="offcanvasEndLabel" class="offcanvas-title">Offcanvas End</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body my-auto mx-0 flex-grow-0">
+        <p class="text-center">
+            Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out
+            print, graphic or web designs. The passage is attributed to an unknown typesetter in
+            the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum
+            et Malorum for use in a type specimen book.
+        </p>
+        <div class="demo-inline-spacing d-flex justify-content-end">
+            <button type="button" class="btn btn-primary">Continue</button>
+            <button type="button" class="btn btn-light" data-bs-dismiss="offcanvas">
+                Cancel
+            </button>
+        </div>
+    </div>
+</div>
+<div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+    <div class="offcanvas-header">
+        <h5 id="offcanvasTopLabel" class="offcanvas-title">Offcanvas Top</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <p>
+            Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out
+            print, graphic or web designs. The passage is attributed to an unknown typesetter in
+            the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum
+            et Malorum for use in a type specimen book.
+        </p>
+        <div class="demo-inline-spacing d-flex justify-content-end">
+            <button type="button" class="btn btn-primary">Continue</button>
+            <button type="button" class="btn btn-light" data-bs-dismiss="offcanvas">
+                Cancel
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Code View Modal -->
+<div class="modal fade" id="codeModal" tabindex="-1" aria-labelledby="codeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="codeModalLabel">Code View</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <pre><code class="language-html"></code></pre>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="copyCodeBtn">Copy</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const codeModal = document.getElementById('codeModal');
+            if(codeModal) {
+                const copyCodeBtn = document.getElementById('copyCodeBtn');
+                let codeToCopy = '';
+
+                codeModal.addEventListener('show.bs.modal', function (event) {
+                    const triggerElement = event.relatedTarget;
+                    const codeTargetSelector = triggerElement.getAttribute('data-code-target');
+                    const codeTargetElement = document.querySelector(codeTargetSelector);
+                    const codeBlock = codeModal.querySelector('.modal-body pre code');
+                    const modalTitle = codeModal.querySelector('.modal-title');
+
+                    // Get section title from card-header
+                    const cardHeader = triggerElement.closest('.card-header');
+                    const sectionTitle = cardHeader.querySelector('h5').textContent;
+                    modalTitle.textContent = `Code View: ${sectionTitle}`;
+
+                    if (codeTargetElement) {
+                        const rawCode = codeTargetElement.querySelector('code').innerHTML;
+                        codeBlock.innerHTML = rawCode;
+                        codeToCopy = new DOMParser().parseFromString(rawCode, "text/html").documentElement.textContent;
+
+                        // Re-highlight the code
+                        if (window.hljs) {
+                            window.hljs.highlightElement(codeBlock);
+                        }
+                    }
+                });
+
+                copyCodeBtn.addEventListener('click', function () {
+                    if (codeToCopy) {
+                        navigator.clipboard.writeText(codeToCopy).then(() => {
+                            copyCodeBtn.textContent = 'Copied!';
+                            setTimeout(() => {
+                                copyCodeBtn.textContent = 'Copy';
+                            }, 2000);
+                        }).catch(err => {
+                            console.error('Failed to copy text: ', err);
+                        });
+                    }
+                });
+            }
+
+            // SweetAlert2
+            const successBtn = document.getElementById('type-success');
+            if (successBtn) {
+                successBtn.onclick = function () {
+                    Swal.fire({
+                        title: 'Good job!',
+                        text: 'You clicked the button!',
+                        icon: 'success',
+                        customClass: {
+                            confirmButton: 'btn btn-primary'
+                        },
+                        buttonsStyling: false
+                    });
+                };
+            }
+            const infoBtn = document.getElementById('type-info');
+            if (infoBtn) {
+                infoBtn.onclick = function () {
+                    Swal.fire({
+                        title: 'Info!',
+                        text: 'You clicked the button!',
+                        icon: 'info',
+                        customClass: {
+                            confirmButton: 'btn btn-primary'
+                        },
+                        buttonsStyling: false
+                    });
+                };
+            }
+            const warningBtn = document.getElementById('type-warning');
+            if (warningBtn) {
+                warningBtn.onclick = function () {
+                    Swal.fire({
+                        title: 'Warning!',
+                        text: 'You clicked the button!',
+                        icon: 'warning',
+                        customClass: {
+                            confirmButton: 'btn btn-primary'
+                        },
+                        buttonsStyling: false
+                    });
+                };
+            }
+            const errorBtn = document.getElementById('type-error');
+            if (errorBtn) {
+                errorBtn.onclick = function () {
+                    Swal.fire({
+                        title: 'Error!',
+                        text: 'You clicked the button!',
+                        icon: 'error',
+                        customClass: {
+                            confirmButton: 'btn btn-primary'
+                        },
+                        buttonsStyling: false
+                    });
+                };
+            }
+            const questionBtn = document.getElementById('type-question');
+            if (questionBtn) {
+                questionBtn.onclick = function () {
+                    Swal.fire({
+                        title: 'Question!',
+                        text: 'You clicked the button!',
+                        icon: 'question',
+                        customClass: {
+                            confirmButton: 'btn btn-primary'
+                        },
+                        buttonsStyling: false
+                    });
+                };
+            }
+            const autoCloseBtn = document.getElementById('auto-close');
+            if (autoCloseBtn) {
+                autoCloseBtn.onclick = function () {
+                    Swal.fire({
+                        title: 'Auto close alert!',
+                        html: 'I will close in <b></b> milliseconds.',
+                        timer: 2000,
+                        timerProgressBar: true,
+                        didOpen: () => {
+                            Swal.showLoading();
+                            const b = Swal.getHtmlContainer().querySelector('b');
+                            timerInterval = setInterval(() => {
+                                b.textContent = Swal.getTimerLeft();
+                            }, 100);
+                        },
+                        willClose: () => {
+                            clearInterval(timerInterval);
+                        }
+                    });
+                };
+            }
+            const confirmColorBtn = document.getElementById('confirm-color');
+            if (confirmColorBtn) {
+                confirmColorBtn.onclick = function () {
+                    Swal.fire({
+                        title: 'Are you sure?',
+                        text: "You won't be able to revert this!",
+                        icon: 'warning',
+                        showCancelButton: true,
+                        confirmButtonText: 'Yes, delete it!',
+                        customClass: {
+                            confirmButton: 'btn btn-primary me-3',
+                            cancelButton: 'btn btn-label-secondary'
+                        },
+                        buttonsStyling: false
+                    }).then(function (result) {
+                        if (result.value) {
+                            Swal.fire({
+                                icon: 'success',
+                                title: 'Deleted!',
+                                text: 'Your file has been deleted.',
+                                customClass: {
+                                    confirmButton: 'btn btn-success'
+                                }
+                            });
+                        }
+                    });
+                };
+            }
+
+            // Event Listeners for toastr buttons
+            document.getElementById('toastr-success').addEventListener('click', function () {
+                toastr.success('This is a success message!', 'Success');
+            });
+            document.getElementById('toastr-info').addEventListener('click', function () {
+                toastr.info('This is an info message!', 'Info');
+            });
+            document.getElementById('toastr-warning').addEventListener('click', function () {
+                toastr.warning('This is a warning message!', 'Warning');
+            });
+            document.getElementById('toastr-error').addEventListener('click', function () {
+                toastr.error('This is an error message!', 'Error');
+            });
+        });
+    </script>
+
+}
