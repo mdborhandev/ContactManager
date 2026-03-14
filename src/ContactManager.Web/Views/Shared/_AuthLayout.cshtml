@@ -1,30 +1,92 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"
+      class="layout-navbar-fixed layout-menu-fixed layout-compact"
+      dir="ltr"
+      data-skin="default"
+      data-bs-theme="light"
+      data-assets-path="~/gtlib/dependencylib/sneatlayout/assets/"
+      data-template="vertical-menu-template">
+
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - ContactManager</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+    <title>@ViewData["Title"] - ContactManager.Web</title>
+    <meta name="description" content="" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="~/gtlib/v1.0.0/gtframework.bundle.css" />
+
+    <!-- Helpers -->
+    <script src="~/gtlib/dependencylib/sneatlayout/assets/vendor/js/helpers.js"></script>
+    <script src="~/gtlib/dependencylib/sneatlayout/assets/vendor/js/template-customizer.js"></script>
+    <script src="~/gtlib/dependencylib/sneatlayout/assets/js/config.js"></script>
+
+    <script type="importmap"></script>
+
     <style>
-        body {
-            background-color: #f8f9fa;
+        .auth-wrapper {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f5f5f9;
+            padding: 2rem;
         }
-        .auth-container {
-            margin-top: 100px;
+        .auth-card {
+            background: white;
+            border-radius: 0.5rem;
+            box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            width: 100%;
+            max-width: 500px;
+        }
+        .auth-logo {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+        .auth-logo i {
+            font-size: 3rem;
+            color: #696cff;
+        }
+        .auth-title {
+            text-align: center;
+            margin-bottom: 0.5rem;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+        .auth-subtitle {
+            text-align: center;
+            color: #697a8d;
+            margin-bottom: 1.5rem;
         }
     </style>
 </head>
 <body>
-    <div class="container auth-container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
+    <div class="auth-wrapper">
+        <div class="auth-card">
+            <div class="auth-logo">
+                <i class="icon-base bx bx-book-contacts"></i>
+            </div>
+            <h2 class="auth-title">Contact Manager</h2>
+            <p class="auth-subtitle">Manage your contacts efficiently</p>
+            
+            <main role="main">
+                @RenderBody()
+            </main>
+        </div>
     </div>
 
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/gtlib/dependencylib/sneatlayout/assets/vendor/libs/jquery/jquery.js"></script>
+    <script src="~/gtlib/dependencylib/sneatlayout/assets/vendor/libs/popper/popper.js"></script>
+    <script src="~/gtlib/dependencylib/sneatlayout/assets/vendor/js/bootstrap.js"></script>
+    <script src="~/gtlib/dependencylib/sneatlayout/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+    <script src="~/gtlib/dependencylib/sneatlayout/assets/vendor/js/menu.js"></script>
+
+    <!-- Main JS -->
+    <script src="~/gtlib/dependencylib/sneatlayout/assets/js/main.js"></script>
+
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

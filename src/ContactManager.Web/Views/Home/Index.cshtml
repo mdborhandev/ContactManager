@@ -2,7 +2,49 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="row">
+    <div class="col-12">
+        <div class="card mb-4">
+            <div class="card-body">
+                <h3 class="card-title mb-3">Welcome to Contact Manager! 👋</h3>
+                <p class="card-text">
+                    Manage your contacts efficiently with our modern contact management system.
+                    Get started by exploring your contacts or adding new ones.
+                </p>
+                
+                <div class="row mt-4">
+                    <div class="col-md-4 mb-3">
+                        <div class="card h-100">
+                            <div class="card-body text-center">
+                                <i class="icon-base bx bx-book-contacts fs-1 text-primary mb-3"></i>
+                                <h5 class="card-title">Manage Contacts</h5>
+                                <p class="card-text">Add, edit, and organize your contacts with ease.</p>
+                                <a asp-controller="Contacts" asp-action="Index" class="btn btn-primary">View Contacts</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card h-100">
+                            <div class="card-body text-center">
+                                <i class="icon-base bx bx-search fs-1 text-success mb-3"></i>
+                                <h5 class="card-title">Quick Search</h5>
+                                <p class="card-text">Find contacts quickly using our search functionality.</p>
+                                <a href="javascript:void(0)" class="btn btn-success">Search Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card h-100">
+                            <div class="card-body text-center">
+                                <i class="icon-base bx bx-shield-quarter fs-1 text-info mb-3"></i>
+                                <h5 class="card-title">Secure & Private</h5>
+                                <p class="card-text">Your data is secure and private. Learn more about our privacy policy.</p>
+                                <a asp-controller="Home" asp-action="Privacy" class="btn btn-info">Privacy Policy</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
