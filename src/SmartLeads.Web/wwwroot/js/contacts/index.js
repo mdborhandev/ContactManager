@@ -76,18 +76,13 @@ function initializeTabulator() {
                 formatter: function(cell) {
                     const id = cell.getValue();
                     return `
-                        <div class="dropdown">
-                            <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
-                                <i class="icon-base bx bx-dots-vertical-rounded"></i>
+                        <div class="d-flex gap-1 justify-content-center">
+                            <button type="button" class="btn btn-sm btn-icon btn-label-primary" onclick="openEditModal(${id})" title="Edit">
+                                <i class="icon-base bx bx-edit-alt"></i>
                             </button>
-                            <div class="dropdown-menu">
-                                <a href="javascript:void(0)" class="dropdown-item" onclick="openEditModal(${id})">
-                                    <i class="icon-base bx bx-edit-alt me-1"></i> Edit
-                                </a>
-                                <a href="javascript:void(0)" class="dropdown-item text-danger" onclick="openDeleteModal(${id})">
-                                    <i class="icon-base bx bx-trash me-1"></i> Delete
-                                </a>
-                            </div>
+                            <button type="button" class="btn btn-sm btn-icon btn-label-danger" onclick="openDeleteModal(${id})" title="Delete">
+                                <i class="icon-base bx bx-trash"></i>
+                            </button>
                         </div>
                     `;
                 }
