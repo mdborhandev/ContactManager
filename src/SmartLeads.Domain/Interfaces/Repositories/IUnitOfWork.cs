@@ -1,9 +1,10 @@
+using SmartLeads.Domain.Interfaces.Repositories;
+
 namespace SmartLeads.Domain.Interfaces.Repositories;
 
-public interface IUnitOfWork : IDisposable
+public interface IUnitOfWork : IAsyncDisposable
 {
-    // Individual repositories will be added here as we create entities
-    // e.g., IContactRepository Contacts { get; }
+    IContactRepository contactRepository { get; }
     
-    Task<int> CompleteAsync();
+    Task SaveAsync(CancellationToken token = default);
 }

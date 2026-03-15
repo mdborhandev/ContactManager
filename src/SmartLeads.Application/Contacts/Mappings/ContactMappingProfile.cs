@@ -1,5 +1,5 @@
 using AutoMapper;
-using SmartLeads.Application.Contacts.Models;
+using SmartLeads.Domain.DTOs;
 using SmartLeads.Domain.Models;
 
 namespace SmartLeads.Application.Contacts.Mappings;

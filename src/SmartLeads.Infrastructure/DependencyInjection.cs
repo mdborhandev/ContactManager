@@ -5,10 +5,10 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using SmartLeads.Application.Common.Interfaces;
+using SmartLeads.Domain.Interfaces.Repositories;
 using SmartLeads.Infrastructure.Identity;
 using SmartLeads.Infrastructure.Persistence;
-using SmartLeads.Infrastructure.Persistence.Repositories;
-using SmartLeads.Domain.Interfaces.Repositories;
+using SmartLeads.Infrastructure.Repositories;
 
 namespace SmartLeads.Infrastructure;
 
@@ -19,7 +19,9 @@ public static class DependencyInjection
         services.AddDbContext<ApplicationDbContext>(options =>
             options.UseNpgsql(configuration.GetConnectionString("DefaultConnection")));
 
+        // Register generic repository for backward compatibility
         services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+        
         services.AddScoped<IUnitOfWork, UnitOfWork>();
 
         services.AddScoped<IPasswordHasher, PasswordHasher>();

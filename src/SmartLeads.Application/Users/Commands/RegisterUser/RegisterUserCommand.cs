@@ -49,8 +49,8 @@ public class RegisterUserCommandHandler : IRequestHandler<RegisterUserCommand, A
             LastName = request.LastName
         };
 
-        await _userRepository.AddAsync(user);
-        await _unitOfWork.CompleteAsync();
+        await _userRepository.AddAsync(user, cancellationToken);
+        await _unitOfWork.SaveAsync(cancellationToken);
 
         var token = _jwtTokenGenerator.GenerateToken(user);
 

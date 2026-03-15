@@ -18,18 +18,18 @@ public record UpdateContactCommand(
 public class UpdateContactCommandHandler : IRequestHandler<UpdateContactCommand, Unit>
 {
     private readonly IUnitOfWork _unitOfWork;
-    private readonly IGenericRepository<Contact> _contactRepository;
 
-    public UpdateContactCommandHandler(IUnitOfWork unitOfWork, IGenericRepository<Contact> contactRepository)
+    public UpdateContactCommandHandler(IUnitOfWork unitOfWork)
     {
         _unitOfWork = unitOfWork;
-        _contactRepository = contactRepository;
     }
 
     public async Task<Unit> Handle(UpdateContactCommand request, CancellationToken cancellationToken)
     {
-        var contact = await _contactRepository.GetByIdAsync(request.Id);
-        if (contact == null || contact.UserId != request.UserId)
+        var contact = await _unitOfWork.contactRepository.GetContactByIdAndUserIdAsync(
+            request.Id, request.UserId, cancellationToken);
+
+        if (contact == null)
         {
             throw new Exception("Contact not found.");
         }
@@ -42,8 +42,8 @@ public class UpdateContactCommandHandler : IRequestHandler<UpdateContactCommand,
         contact.JobTitle = request.JobTitle;
         contact.Address = request.Address;
 
-        _contactRepository.Update(contact);
-        await _unitOfWork.CompleteAsync();
+        _unitOfWork.contactRepository.Edit(contact);
+        await _unitOfWork.SaveAsync(cancellationToken);
 
         return Unit.Value;
     }

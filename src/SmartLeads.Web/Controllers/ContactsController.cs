@@ -1,52 +1,134 @@
-using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
-using SmartLeads.Application.Contacts.Queries.GetContacts;
-using SmartLeads.Application.Contacts.Commands.CreateContact;
-using SmartLeads.Application.Contacts.Commands.UpdateContact;
-using SmartLeads.Application.Contacts.Commands.DeleteContact;
-using SmartLeads.Application.Contacts.Models;
+using SmartLeads.Domain.DTOs;
+using SmartLeads.Domain.Interfaces.Repositories;
+using SmartLeads.Infrastructure.Repositories;
 
 namespace SmartLeads.Web.Controllers;
 
 [Authorize]
 public class ContactsController : Controller
 {
-    private readonly ISender _sender;
+    private readonly IUnitOfWork _unitOfWork;
 
-    public ContactsController(ISender sender)
+    public ContactsController(IUnitOfWork unitOfWork)
     {
-        _sender = sender;
+        _unitOfWork = unitOfWork;
     }
 
     private int UserId => int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier) ?? "0");
 
-    public async Task<IActionResult> Index()
+    // Main Index page
+    public IActionResult Index()
     {
-        var contacts = await _sender.Send(new GetContactsQuery(UserId));
-        return View(contacts);
+        return View();
     }
 
+    // API: Get all contacts
+    [HttpGet("/api/contacts")]
+    public async Task<IActionResult> GetContacts()
+    {
+        var contacts = await _unitOfWork.contactRepository.GetContactDtosByUserIdAsync(UserId);
+        return Ok(contacts);
+    }
+
+    // API: Get single contact
+    [HttpGet("/api/contacts/{id}")]
+    public async Task<IActionResult> GetContact(int id)
+    {
+        var contact = await _unitOfWork.contactRepository.GetContactDtoByIdAsync(id);
+        if (contact == null) return NotFound();
+        
+        return Ok(contact);
+    }
+
+    // API: Create contact
+    [HttpPost("/api/contacts")]
+    public async Task<IActionResult> CreateContact([FromBody] CreateContactRequest request)
+    {
+        if (!ModelState.IsValid)
+        {
+            return BadRequest(new { errors = new[] { "Invalid model state" } });
+        }
+
+        var contact = new Domain.Models.Contact
+        {
+            UserId = UserId,
+            FirstName = request.FirstName,
+            LastName = request.LastName,
+            Email = request.Email,
+            PhoneNumber = request.PhoneNumber,
+            Company = request.Company,
+            JobTitle = request.JobTitle,
+            Address = request.Address
+        };
+
+        await _unitOfWork.contactRepository.AddAsync(contact);
+        await _unitOfWork.SaveAsync();
+
+        return Ok(new { success = true, id = contact.Id });
+    }
+
+    // API: Update contact
+    [HttpPut("/api/contacts/{id}")]
+    public async Task<IActionResult> UpdateContact(int id, [FromBody] UpdateContactRequest request)
+    {
+        if (id != request.Id)
+        {
+            return BadRequest(new { success = false, message = "ID mismatch" });
+        }
+        
+        if (!ModelState.IsValid)
+        {
+            return BadRequest(new { errors = new[] { "Invalid model state" } });
+        }
+
+        var contact = await _unitOfWork.contactRepository.GetContactByIdAndUserIdAsync(id, UserId);
+        if (contact == null)
+        {
+            return NotFound();
+        }
+
+        contact.FirstName = request.FirstName;
+        contact.LastName = request.LastName;
+        contact.Email = request.Email;
+        contact.PhoneNumber = request.PhoneNumber;
+        contact.Company = request.Company;
+        contact.JobTitle = request.JobTitle;
+        contact.Address = request.Address;
+
+        _unitOfWork.contactRepository.Edit(contact);
+        await _unitOfWork.SaveAsync();
+
+        return Ok(new { success = true });
+    }
+
+    // API: Delete contact
+    [HttpDelete("/api/contacts/{id}")]
+    public async Task<IActionResult> DeleteContact(int id)
+    {
+        var contact = await _unitOfWork.contactRepository.GetContactByIdAndUserIdAsync(id, UserId);
+        if (contact == null)
+        {
+            return NotFound();
+        }
+
+        await _unitOfWork.contactRepository.RemoveAsync(id);
+        await _unitOfWork.SaveAsync();
+
+        return Ok(new { success = true });
+    }
+
+    // Legacy actions (kept for backward compatibility if needed)
     public IActionResult Create()
     {
         return View();
     }
 
-    [HttpPost]
-    [ValidateAntiForgeryToken]
-    public async Task<IActionResult> Create(CreateContactCommand command)
-    {
-        if (!ModelState.IsValid) return View(command);
-
-        await _sender.Send(command with { UserId = UserId });
-        return RedirectToAction(nameof(Index));
-    }
-
     public async Task<IActionResult> Edit(int id)
     {
-        var contacts = await _sender.Send(new GetContactsQuery(UserId));
-        var contact = contacts.FirstOrDefault(c => c.Id == id);
+        var contact = await _unitOfWork.contactRepository.GetContactDtoByIdAsync(id);
         if (contact == null) return NotFound();
 
         return View(contact);
@@ -54,12 +136,49 @@ public class ContactsController : Controller
 
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public async Task<IActionResult> Edit(int id, UpdateContactCommand command)
+    public async Task<IActionResult> Create(CreateContactRequest request)
     {
-        if (id != command.Id) return BadRequest();
-        if (!ModelState.IsValid) return View(command);
+        if (!ModelState.IsValid) return View(request);
 
-        await _sender.Send(command with { UserId = UserId });
+        var contact = new Domain.Models.Contact
+        {
+            UserId = UserId,
+            FirstName = request.FirstName,
+            LastName = request.LastName,
+            Email = request.Email,
+            PhoneNumber = request.PhoneNumber,
+            Company = request.Company,
+            JobTitle = request.JobTitle,
+            Address = request.Address
+        };
+
+        await _unitOfWork.contactRepository.AddAsync(contact);
+        await _unitOfWork.SaveAsync();
+
+        return RedirectToAction(nameof(Index));
+    }
+
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> Edit(int id, UpdateContactRequest request)
+    {
+        if (id != request.Id) return BadRequest();
+        if (!ModelState.IsValid) return View(request);
+
+        var contact = await _unitOfWork.contactRepository.GetContactByIdAndUserIdAsync(id, UserId);
+        if (contact == null) return NotFound();
+
+        contact.FirstName = request.FirstName;
+        contact.LastName = request.LastName;
+        contact.Email = request.Email;
+        contact.PhoneNumber = request.PhoneNumber;
+        contact.Company = request.Company;
+        contact.JobTitle = request.JobTitle;
+        contact.Address = request.Address;
+
+        _unitOfWork.contactRepository.Edit(contact);
+        await _unitOfWork.SaveAsync();
+
         return RedirectToAction(nameof(Index));
     }
 
@@ -67,7 +186,35 @@ public class ContactsController : Controller
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> Delete(int id)
     {
-        await _sender.Send(new DeleteContactCommand(id, UserId));
+        var contact = await _unitOfWork.contactRepository.GetContactByIdAndUserIdAsync(id, UserId);
+        if (contact != null)
+        {
+            await _unitOfWork.contactRepository.RemoveAsync(id);
+            await _unitOfWork.SaveAsync();
+        }
+
         return RedirectToAction(nameof(Index));
     }
 }
+
+// Request DTOs
+public record CreateContactRequest(
+    string FirstName,
+    string LastName,
+    string? Email,
+    string? PhoneNumber,
+    string? Company,
+    string? JobTitle,
+    string? Address
+);
+
+public record UpdateContactRequest(
+    int Id,
+    string FirstName,
+    string LastName,
+    string? Email,
+    string? PhoneNumber,
+    string? Company,
+    string? JobTitle,
+    string? Address
+);

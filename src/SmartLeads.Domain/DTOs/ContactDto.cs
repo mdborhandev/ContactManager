@@ -9,6 +9,4 @@ public record ContactDto(
     string? Company,
     string? JobTitle,
     string? Address,
-    bool IsArchived,
-    DateTime CreatedAt,
-    DateTime? UpdatedAt);
+    bool IsArchived);

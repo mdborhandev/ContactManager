@@ -1,6 +1,5 @@
 using MediatR;
 using SmartLeads.Domain.Interfaces.Repositories;
-using SmartLeads.Domain.Models;
 
 namespace SmartLeads.Application.Contacts.Commands.DeleteContact;
 
@@ -9,24 +8,24 @@ public record DeleteContactCommand(int Id, int UserId) : IRequest<Unit>;
 public class DeleteContactCommandHandler : IRequestHandler<DeleteContactCommand, Unit>
 {
     private readonly IUnitOfWork _unitOfWork;
-    private readonly IGenericRepository<Contact> _contactRepository;
 
-    public DeleteContactCommandHandler(IUnitOfWork unitOfWork, IGenericRepository<Contact> contactRepository)
+    public DeleteContactCommandHandler(IUnitOfWork unitOfWork)
     {
         _unitOfWork = unitOfWork;
-        _contactRepository = contactRepository;
     }
 
     public async Task<Unit> Handle(DeleteContactCommand request, CancellationToken cancellationToken)
     {
-        var contact = await _contactRepository.GetByIdAsync(request.Id);
-        if (contact == null || contact.UserId != request.UserId)
+        var contact = await _unitOfWork.contactRepository.GetContactByIdAndUserIdAsync(
+            request.Id, request.UserId, cancellationToken);
+
+        if (contact == null)
         {
             throw new Exception("Contact not found.");
         }
 
-        _contactRepository.Remove(contact);
-        await _unitOfWork.CompleteAsync();
+        await _unitOfWork.contactRepository.RemoveAsync(contact);
+        await _unitOfWork.SaveAsync(cancellationToken);
 
         return Unit.Value;
     }
